@@ -88,12 +88,13 @@
           <li class="nav-item">
             <a href="industryData.html" class="nav-link">
               <i class="fa fa-book"></i>
-              產業地圖分析月報
+              產業地圖分析
             </a>
           </li>
         </ul>
       </nav>
     </aside>
+    <div class="overlay"></div>
     <main class="main">
       <div class="container-fluid">
         <div class="animated fadeIn">
@@ -154,8 +155,8 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="col-sm-5 input-group">
+                <div class="form-group row justify-content-end">
+                  <div class="col-sm-5 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
@@ -305,11 +306,17 @@
         "type": "pie",
         "angle": 18,
         "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+        "labelText": "[[title]]: [[value]]",
         "depth3D": 17,
         "gradientType": "linear",
-        "labelRadius": 27,
-        "pullOutRadius": "10%",
-        "startRadius": "250%",
+        "labelRadius": 30,
+        "pullOutRadius": "2%",
+        "startRadius": "700%",
+        "pullOutDuration": 2,
+        "startAlpha": 0.14,
+        "pullOutEffect": "easeOutSine",
+        "startDuration": 0.5,
+        "startEffect": "easeOutSine",
         "baseColor": "#1ABB9C",
         "colors": [
           "#1abb9c, "
@@ -318,9 +325,6 @@
         "labelColorField": "#4A4A4A",
         "labelTickColor": "#4A4A4A",
         "outlineThickness": 14,
-        "pullOutEffect": "easeOutSine",
-        "startDuration": 0.5,
-        "startEffect": "easeOutSine",
         "titleField": "category",
         "valueField": "column-1",
         "color": "#4A4A4A",
@@ -354,11 +358,17 @@
         "type": "pie",
         "angle": 18,
         "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+        "labelText": "[[title]]: [[value]]",
         "depth3D": 17,
         "gradientType": "linear",
-        "labelRadius": 27,
-        "pullOutRadius": "10%",
-        "startRadius": "250%",
+        "labelRadius": 30,
+        "pullOutRadius": "3%",
+        "startRadius": "580%",
+        "pullOutDuration": 2,
+        "startAlpha": 0.14,
+        "pullOutEffect": "easeOutSine",
+        "startDuration": 0.5,
+        "startEffect": "easeOutSine",
         "baseColor": "#1ABB9C",
         "colors": [
           "#1abb9c, "

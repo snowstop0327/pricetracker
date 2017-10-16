@@ -77,6 +77,10 @@ $(document).ready(function($){
     $('body').toggleClass('sidebar-hidden');
     resizeBroadcast();
   });
+  $('.overlay').click(function() {
+    $('body').toggleClass('sidebar-hidden');
+    resizeBroadcast();
+  });
 
   $('.sidebar-minimizer').click(function(){
     $('body').toggleClass('sidebar-minimized');
@@ -144,3 +148,12 @@ function init(url) {
   $('[rel="popover"],[data-rel="popover"],[data-toggle="popover"]').popover();
 
 }
+
+// function resizeWidth() {
+//   var browserWidth = $( window ).width();
+//   if(browserWidth < 991) {
+//     $('body').addClass('mobile-sidebar');
+//   } else  {
+//     $('body').removeClass('mobile-sidebar');
+//   } 
+// }

@@ -84,6 +84,11 @@
       background-color: $table-hover-bg !important;
     }
   }
+  .down-line {
+    @include hover {
+      background-color: $orange !important;
+    }
+  }
 }
 
 

@@ -80,12 +80,13 @@
           <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="fa fa-book"></i>
-              產業地圖分析月報
+              產業地圖分析
             </a>
           </li>
         </ul>
       </nav>
     </aside>
+    <div class="overlay"></div>
     <main class="main">
       <div class="container-fluid">
         <div class="animated fadeIn">
@@ -194,12 +195,12 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="col-sm-6 input-group">
+                <div class="form-group row justify-content-end">
+                  <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" name="daterange" value="01/01/2015 - 01/31/2015">
+                    <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -218,12 +219,12 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group">
-                  <div class="col-sm-6 input-group">
+                <div class="form-group row justify-content-end">
+                  <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" name="daterange" value="01/01/2015 - 01/31/2015">
+                    <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -238,21 +239,6 @@
               <div class="card">
                 <h2 class="card-header">通路今日概況</h2>
                 <div class="card-body">
-                  <!-- <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 購物平台
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 商店街
-                    </label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <label class="form-check-label">
-                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> 拍賣平台
-                    </label>
-                  </div> -->
                   <div class="form-check form-check-inline coloured">
                     <div class="checkbox">
                       <label>
@@ -277,12 +263,12 @@
                   <table id="product01" class="table table-responsive table-hover table-outline mb-0 product-table">
                     <thead>
                       <tr>
-                        <th class="min-w" data-sort="string">購物平台<i class="fa fa-caret-down"></i></th>
+                        <th class="min-w">購物平台</th>
                         <th class="min-w">通路名稱</th>
                         <th>商品名稱</th>
-                        <th class="text-right min-w" data-sort="float">通路價格<i class="fa fa-caret-down"></i></th>
-                        <th class="text-right"><span data-toggle="tooltip" title="通路價格與破價標準的價差。">價差<i class="fa fa-question-circle"></i></span></th>
-                        <th class="text-right"><span data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。">價差率<i class="fa fa-question-circle"></i></span></th>
+                        <th class="text-right min-w">通路價格</th>
+                        <th class="text-right"  data-sort="int"><span data-toggle="tooltip" title="通路價格與破價標準的價差。">價差<i class="fa fa-question-circle"></i></span></th>
+                        <th class="text-right"  data-sort="float"><span data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。">價差率<i class="fa fa-question-circle"></i></span></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -291,15 +277,15 @@
                         <td>品牌旗艦館</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right safe-tag">$41,300</td>
-                        <td class="text-right safe-tag">-$300</td>
-                        <td class="text-right safe-tag">-20.00%</td>
+                        <td class="text-right safe-tag">-$10</td>
+                        <td class="text-right safe-tag"">-23.00%</td>
                       </tr>
                       <tr class="price-down">
                         <td>Yahoo超級商城</td>
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right safe-tag">$41,300</td>
-                        <td class="text-right safe-tag">-$300</td>
+                        <td class="text-right safe-tag">-$890</td>
                         <td class="text-right safe-tag">-20.00%</td>
                       </tr>
                       <tr class="price-down">
@@ -307,7 +293,7 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
+                        <td class="text-right">$100</td>
                         <td class="text-right">-20.00%</td>
                       </tr>
                       <tr class="price-down">
@@ -315,7 +301,7 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
+                        <td class="text-right">-$50</td>
                         <td class="text-right">-20.00%</td>
                       </tr>
                       <tr class="price-down">
@@ -323,7 +309,7 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
+                        <td class="text-right">$10</td>
                         <td class="text-right">-20.00%</td>
                       </tr>
                       <tr class="down-line">
@@ -334,15 +320,15 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
-                        <td class="text-right">-20.00%</td>
+                        <td class="text-right">$300</td>
+                        <td class="text-right">70.00%</td>
                       </tr>
                       <tr>
                         <td>Yahoo超級商城</td>
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
+                        <td class="text-right">-$350</td>
                         <td class="text-right">-20.00%</td>
                       </tr>
                       <tr>
@@ -350,7 +336,7 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$43,300</td>
-                        <td class="text-right">-$300</td>
+                        <td class="text-right">$500</td>
                         <td class="text-right">-20.00%</td>
                       </tr>
                       <tr>
@@ -358,8 +344,8 @@
                         <td>3C福利品專賣店</td>
                         <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
                         <td class="text-right">$41,300</td>
-                        <td class="text-right">-$300</td>
-                        <td class="text-right">-20.00%</td>
+                        <td class="text-right">$700</td>
+                        <td class="text-right">20.00%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -405,11 +391,11 @@
       })
     </script>
   <!-- stupidtable script -->
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       $(function () {
         $('#product01').stupidtable();
       });
-    </script> -->
+    </script>
   <script>
     $.material.init();
   </script>

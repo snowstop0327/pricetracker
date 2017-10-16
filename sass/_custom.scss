@@ -60,7 +60,7 @@ footer a {
   top: 0;
   left: 0;
   will-change: padding-left;
-  z-index: 3;
+  z-index: 5;
   background: $blue-dark;
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   .nav-link {
@@ -219,9 +219,17 @@ nav.app-header.navbar  {
   width: 100%;
   height: 400px;
 }
-/*.chartdiv a {
+.chartdiv a {
   display: none !important;
-}*/
+}
+.amcharts-export-menu {
+  a {
+    display: block !important;
+  }
+}
+th[data-sort] {
+  cursor: pointer;
+}
 
 .product-width {
   width: 100%;
@@ -695,7 +703,24 @@ table.product-table {
   box-shadow: 0 0 14px rgba($black, 0.6);
   max-width: 360px;
 }
-
+.overlay {
+  display: none;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  background-color: rgba($black,0.5);
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 0.3s all ease-out;
+}
+.sidebar-hidden {
+  .overlay {
+    display: none;
+    opacity: 0;
+  }
+}
 //
 // Mobile layout
 //
@@ -704,13 +729,19 @@ table.product-table {
   .main, nav.app-header.navbar {
     padding-left: 0;
   }
+  .sidebar .nav, .sidebar .sidebar-nav {
+    width: 260px !important;
+  }
   .sidebar {
-    transform: translateX(260px);
+    margin-left: 0;
   }
   .sidebar-hidden {
     .sidebar {
-      transform: translateX(-260px);
+      transform: translateX(-300px);
     }
+  }
+  .overlay {
+    display: block;
   }
 
 }
