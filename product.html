@@ -1,0 +1,988 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>價格監控品牌端 ｜ 商品頁</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="asset/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/images/favicon@2x.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="asset/images/favicon@3x.png">
+  <!-- Main styles for this application -->
+  <link href="asset/stylesheets/style.css" rel="stylesheet">
+</head>
+<body class="app header-fixed">
+  <div class="wrapper">
+    <header class="main-header">
+      <nav class="app-header navbar navbar-static-top">
+        <button class="navbar-toggler sidebar-toggler" type="button">☰</button>
+        <img src="asset/images/main_logo.svg" alt="價格監控" class="main-logo">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-cog"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="#" class="dropdown-item"><i class="fa fa-gear"></i>重設密碼</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i>登出</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside class="sidebar">
+      <div class="brand-logo">
+        <!-- logo for regular state and mobile devices -->
+        <img src="asset/images/brand_logo.svg" alt="品牌logo名稱">
+      </div>
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-dashboard"></i>
+              總覽
+            </a>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <a href="#" class="nav-link nav-dropdown-toggle">
+              <i class="fa fa-folder"></i>
+              品牌名稱
+            </a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-link nav-dropdown-toggle">
+                  <i class="fa fa-caret-right"></i>
+                  分類第一層
+                </a>
+                <ul class="nav-dropdown-items">
+                  <li class="nav-item nav-dropdown">
+                    <a href="#" class="nav-link nav-dropdown-toggle">
+                      <i class="fa fa-caret-right"></i>
+                      分類第二層
+                    </a>
+                    <ul class="nav-dropdown-items">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">商品型號</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="product.html" class="nav-link">【Apple】iMac MK482TA 27吋 桌上型電腦</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-bar-chart-o"></i>
+              市場數據分析
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="fa fa-book"></i>
+              產業地圖分析月報
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+      <div class="container-fluid">
+        <div class="animated fadeIn">
+          <div class="content-top clearfix">
+            <h1 class="h4 float-left">【Apple】iMac MK482TA 27吋 桌上型電腦</h1>
+          </div>
+          <div class="row">
+            <div class="img-box">
+              <div class="card bg-white">
+                <img src="asset/images/refurb-2013-imac-215-gallery.jpeg" alt="【Apple】iMac MK482TA 27吋 桌上型電腦">
+              </div>
+            </div>
+            <div class="col">
+              <div class="row flex-wrap product-info">
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card bg-white text-center">
+                    <div class="card-header">
+                      <h2 class="card-title text-left h6">價格提醒<i class="fa fa-question-circle" data-toggle="tooltip" title="您設定的最低販售價格。當通路低於此價格時，系統會發出破價通知。"></i></h2>
+                      <div class="action-group">
+                        <button type="button" class="btn btn-link modal-btn" data-toggle="modal" data-target="#myModal">
+                          <i class="fa fa-pencil"></i>
+                        </button>
+                      </div>
+                    </div>
+                    <!-- /.modal -->
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                      <div class="modal-dialog" role="document">
+                          <div class="modal-content">
+                              <div class="modal-header">
+                                  <h4 class="modal-title">價格提醒</h4>
+                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                      <span aria-hidden="true">×</span>
+                                  </button>
+                              </div>
+                              <div class="modal-body">
+                                <div class="input-group">
+                                  <span class="input-group-addon">$</span>
+                                  <div class="form-group is-empty">
+                                    <!-- <label for="number00">破價標準</label> -->
+                                    <input id="number00" type="number" class="form-control">
+                                    <!-- <input type="number" class="form-control is-valid"> -->
+                                    <span class="invailid-block">請輸入純數字</span>
+                                  </div>
+                                </div> 
+                              </div>
+                              <div class="modal-footer">
+                                  <button type="button" class="btn btn-primary">確認</button>
+                              </div>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <span class="d-block py-1"><strong class="h3">67,399</strong>元</span>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card bg-white text-center">
+                    <div class="card-header">
+                      <h2 class="card-title text-left h6">銷售通路數<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，有販售該商品的通路數量。"></i></h2>
+                    </div>
+                    <span class="d-block py-1"><strong class="h3">217</strong></span>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card bg-white text-center">
+                    <div class="card-header">
+                      <h2 class="card-title text-left h6">最大價差率<i class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></i></h2>
+                    </div>
+                    <span class="d-block py-1"><strong class="h3">13</strong>%</span>
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-8">
+                  <div class="card bg-white text-center">
+                    <div class="card-header with-border">
+                      <h2 class="text-left card-title h6">通路最高/最低價<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，該商品販售的最高價與最低價。"></i></h2>
+                    </div>
+                    <ul class="row nav no-gutters">
+                      <li class="col right-border py-2"><span class="text-primary">最低價：</span><strong class="h3">65,300</strong>元</li>
+                      <li class="col py-2"><span class="text-danger">最高價：</span><strong class="h3">65,700</strong>元</li>
+                    </ul>
+                    <!-- <span>最低價：</span><span><strong>65,300</strong>元</span>
+                    <span>最高價：</span><span><strong>65,700</strong>元</span> -->
+                  </div>
+                </div>
+                <div class="col-sm-12 col-lg-4">
+                  <div class="card bg-white text-center">
+                    <div class="card-header">
+                      <h2 class="text-left card-title h6">最低價通路<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，販售該商品最低價的通路。"></i></h2>
+                    </div>
+                    <div class="py-1">
+                      <span class="d-block h6 ellipsis-text">friDay購物 x GoHappy</span>
+                      <span class="text-muted">還有2家...</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">各通路歷史低價</h2>
+                  <div class="action-group">
+                    <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-6 input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" name="daterange" value="01/01/2015 - 01/31/2015">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                <div class="card-body">
+                  <div id="chartdiv3" class="chartdiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <h2 class="card-title">各通路價差率</h2>
+                  <div class="action-group">
+                    <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="col-sm-6 input-group">
+                    <div class="input-group-addon">
+                      <i class="fa fa-calendar"></i>
+                    </div>
+                    <input type="text" class="form-control pull-right" name="daterange" value="01/01/2015 - 01/31/2015">
+                  </div>
+                  <!-- /.input group -->
+                </div>
+                <div class="card-body">
+                  <div id="chartdiv4" class="chartdiv"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <h2 class="card-header">通路今日概況</h2>
+                <div class="card-body">
+                  <!-- <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1"> 購物平台
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2"> 商店街
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> 拍賣平台
+                    </label>
+                  </div> -->
+                  <div class="form-check form-check-inline coloured">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 購物平台
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-check form-check-inline coloured">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 商店街
+                      </label>
+                    </div>
+                  </div>
+                  <div class="form-check form-check-inline coloured">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox"> 拍賣平台
+                      </label>
+                    </div>
+                  </div>
+                  <table id="product01" class="table table-responsive table-hover table-outline mb-0 product-table">
+                    <thead>
+                      <tr>
+                        <th class="min-w" data-sort="string">購物平台<i class="fa fa-caret-down"></i></th>
+                        <th class="min-w">通路名稱</th>
+                        <th>商品名稱</th>
+                        <th class="text-right min-w" data-sort="float">通路價格<i class="fa fa-caret-down"></i></th>
+                        <th class="text-right"><span data-toggle="tooltip" title="通路價格與破價標準的價差。">價差<i class="fa fa-question-circle"></i></span></th>
+                        <th class="text-right"><span data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。">價差率<i class="fa fa-question-circle"></i></span></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="price-down">
+                        <td>Yahoo購物中心</td>
+                        <td>品牌旗艦館</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right safe-tag">$41,300</td>
+                        <td class="text-right safe-tag">-$300</td>
+                        <td class="text-right safe-tag">-20.00%</td>
+                      </tr>
+                      <tr class="price-down">
+                        <td>Yahoo超級商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right safe-tag">$41,300</td>
+                        <td class="text-right safe-tag">-$300</td>
+                        <td class="text-right safe-tag">-20.00%</td>
+                      </tr>
+                      <tr class="price-down">
+                        <td>UDN買東西</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr class="price-down">
+                        <td>momo摩天商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr class="price-down">
+                        <td>樂天線上購物</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr class="down-line">
+                        <td class="text-center" colspan="6">破價提醒<i class="fa fa-caret-up"></i></td>
+                      </tr>
+                      <tr>
+                        <td>Yahoo超級商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr>
+                        <td>Yahoo超級商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr>
+                        <td>Yahoo超級商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$43,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                      <tr>
+                        <td>Yahoo超級商城</td>
+                        <td>3C福利品專賣店</td>
+                        <td><a href="#" class="table-product-link">華碩 ASUS UX501VW-0052A6700HQ ZENBOOK PRO【免運含稅可分期】【華克電腦】【筆電 電腦】</a></td>
+                        <td class="text-right">$41,300</td>
+                        <td class="text-right">-$300</td>
+                        <td class="text-right">-20.00%</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="app-footer">
+      <div class="ccc text-center">
+          © 2017 EZprice
+      </div>
+    </footer>
+  </div>
+  <!-- Jquery scripts -->
+    <script type="text/javascript" src="asset/javascripts/jquery-slim.min.js"></script>
+
+  <!-- main scripts -->
+    <script type="text/javascript" src="asset/javascripts/main-dist.js"></script>
+
+  <!-- amchart-js area -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/pie.js"></script>
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+
+  <!-- amCharts plugins 輸出功能 -->
+    <script type="text/javascript" src="https://www.amcharts.com/lib/3/plugins/export/export.min.js"></script>
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css">
+
+  <!-- timepicker script -->
+    <script type="text/javascript">
+      $(function() {
+          $('input[name="daterange"]').daterangepicker();
+      });
+    </script>
+
+  <!-- tooltip script -->
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+  <!-- stupidtable script -->
+    <!-- <script type="text/javascript">
+      $(function () {
+        $('#product01').stupidtable();
+      });
+    </script> -->
+  <script>
+    $.material.init();
+  </script>
+  <!-- 各通路歷史低價 數據資料 -->
+  <script type="text/javascript">
+      AmCharts.makeChart("chartdiv3",
+        {
+          "type": "serial",
+          "balloonDateFormat": "MM/DD",
+          "categoryField": "date",
+          "dataDateFormat": "YYYY-MM-DD",
+          "synchronizeGrid": true,
+          "colors": [
+            "#1abb9c",
+            "#FCD202",
+            "#e85656",
+            "#2DACD1",
+            "#185C96",
+            "#F39C12",
+            "#00a65a",
+            "#9c1abb",
+            "#3de4c4",
+            "#bb1a39",
+            "#1a8abb",
+            "#0c5446",
+            "#3b9a88",
+            "#757575"
+          ],
+          "gridAboveGraphs": true,
+          "color": "#4A4A4A",
+          "processTimeout": 1,
+          "categoryAxis": {
+            "dateFormats": [
+              {
+                "period": "fff",
+                "format": "JJ:NN:SS"
+              },
+              {
+                "period": "ss",
+                "format": "JJ:NN:SS"
+              },
+              {
+                "period": "mm",
+                "format": "JJ:NN"
+              },
+              {
+                "period": "hh",
+                "format": "JJ:NN"
+              },
+              {
+                "period": "DD",
+                "format": "MM/DD"
+              },
+              {
+                "period": "WW",
+                "format": "MMM DD"
+              },
+              {
+                "period": "MM",
+                "format": "YYYY/MM"
+              },
+              {
+                "period": "YYYY",
+                "format": "YYYY"
+              }
+            ],
+            "parseDates": true
+          },
+          "chartCursor": {
+            "enabled": true,
+            "categoryBalloonDateFormat": "MM/DD,YYYY",
+            "cursorColor": "#1ABB9C",
+            "tabIndex": 0
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "bullet": "round",
+              "id": "AmGraph-1",
+              "title": "大買家網路店",
+              "valueField": "column-1"
+            },
+            {
+              "bullet": "round",
+              "id": "AmGraph-2",
+              "title": "燦坤快3",
+              "valueField": "column-2"
+            },
+            {
+              "bullet": "round",
+              "bulletBorderThickness": 0,
+              "id": "AmGraph-3",
+              "title": "PChome線上購物",
+              "valueField": "column-3"
+            },
+            {
+              "bullet": "round",
+              "id": "AmGraph-4",
+              "title": "東森購物",
+              "valueField": "column-4"
+            },
+            {
+              "bullet": "round",
+              "bulletBorderThickness": 3,
+              "id": "AmGraph-5",
+              "title": "udn買東西",
+              "valueField": "column-5"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-6",
+              "title": "friDay購物 x GoHappy",
+              "valueField": "column-6"
+            },
+            {
+              "bullet": "square",
+              "bulletBorderThickness": 0,
+              "id": "AmGraph-7",
+              "title": "森森購物",
+              "valueField": "column-7"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-8",
+              "title": "Yahoo奇摩購物中心",
+              "valueField": "column-8"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-9",
+              "tabIndex": 5,
+              "title": "樂天市場購物網",
+              "valueField": "column-9"
+            },
+            {
+              "bullet": "triangleDown",
+              "bulletBorderThickness": 0,
+              "id": "AmGraph-11",
+              "title": "不分通路最低價",
+              "valueField": "column-10"
+            }
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "dateFormats": [
+                {
+                  "period": "fff",
+                  "format": "JJ:NN:SS"
+                },
+                {
+                  "period": "ss",
+                  "format": "JJ:NN:SS"
+                },
+                {
+                  "period": "mm",
+                  "format": "JJ:NN"
+                },
+                {
+                  "period": "hh",
+                  "format": "JJ:NN"
+                },
+                {
+                  "period": "DD",
+                  "format": "MM/DD"
+                },
+                {
+                  "period": "WW",
+                  "format": "MMM DD"
+                },
+                {
+                  "period": "MM",
+                  "format": "MM/DD"
+                },
+                {
+                  "period": "YYYY",
+                  "format": "YYYY"
+                }
+              ],
+              // "title": "Axis title"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "export": {
+            // "enabled": false
+            "enabled": true
+          },
+          "legend": {
+            "enabled": true,
+            "useGraphSettings": true
+          },
+          // "titles": [
+          //   {
+          //     "id": "Title-1",
+          //     "size": 15,
+          //     "text": "Chart Title"
+          //   }
+          // ],
+          "dataProvider": [
+            {
+              "date": "2017-10-01",
+              "column-1": 8,
+              "column-2": 5,
+              "column-3": 43,
+              "column-4": 95,
+              "column-5": 11,
+              "column-6": 70,
+              "column-7": 59,
+              "column-9": 35,
+              "column-8": 82,
+              "column-10": 93
+            },
+            {
+              "date": "2017-10-02",
+              "column-1": 6,
+              "column-2": 7,
+              "column-3": 71,
+              "column-4": 3,
+              "column-5": 73,
+              "column-6": 45,
+              "column-7": 6,
+              "column-9": 73,
+              "column-8": 78,
+              "column-10": 45
+            },
+            {
+              "date": "2017-10-03",
+              "column-1": 2,
+              "column-2": 3,
+              "column-3": 33,
+              "column-4": 91,
+              "column-5": 53,
+              "column-6": 42,
+              "column-7": 21,
+              "column-9": 35,
+              "column-8": 25,
+              "column-10": 73
+            },
+            {
+              "date": "2017-10-04",
+              "column-1": 1,
+              "column-2": 3,
+              "column-3": 85,
+              "column-4": 63,
+              "column-5": 89,
+              "column-6": 27,
+              "column-7": 68,
+              "column-9": 100,
+              "column-8": 86,
+              "column-10": 19
+            },
+            {
+              "date": "2017-10-05",
+              "column-1": 2,
+              "column-2": 1,
+              "column-3": 62,
+              "column-4": 15,
+              "column-5": 0,
+              "column-6": 45,
+              "column-7": 75,
+              "column-9": 11,
+              "column-8": 43,
+              "column-10": 42
+            },
+            {
+              "date": "2017-10-06",
+              "column-1": 3,
+              "column-2": 2,
+              "column-3": 72,
+              "column-4": 85,
+              "column-5": 95,
+              "column-6": 82,
+              "column-7": 58,
+              "column-9": 15,
+              "column-8": 31,
+              "column-10": 23
+            },
+            {
+              "date": "2017-10-07",
+              "column-1": 6,
+              "column-2": 8,
+              "column-3": 91,
+              "column-4": 73,
+              "column-5": 38,
+              "column-6": 44,
+              "column-7": 28,
+              "column-9": 75,
+              "column-8": 3,
+              "column-10": 49
+            }
+          ]
+        }
+      );
+  </script>
+  <!-- 各通路價差率 數據資料 -->
+  <script type="text/javascript">
+      AmCharts.makeChart("chartdiv4",
+        {
+          "type": "serial",
+          "balloonDateFormat": "MM/DD",
+          "categoryField": "date",
+          "dataDateFormat": "YYYY-MM-DD",
+          "synchronizeGrid": true,
+          "colors": [
+            "#1abb9c",
+            "#FCD202",
+            "#e85656",
+            "#2DACD1",
+            "#185C96",
+            "#F39C12",
+            "#00a65a",
+            "#9c1abb",
+            "#3de4c4",
+            "#bb1a39",
+            "#1a8abb",
+            "#0c5446",
+            "#3b9a88",
+            "#757575"
+          ],
+          "gridAboveGraphs": true,
+          "color": "#4A4A4A",
+          "processTimeout": 1,
+          "categoryAxis": {
+            "dateFormats": [
+              {
+                "period": "fff",
+                "format": "JJ:NN:SS"
+              },
+              {
+                "period": "ss",
+                "format": "JJ:NN:SS"
+              },
+              {
+                "period": "mm",
+                "format": "JJ:NN"
+              },
+              {
+                "period": "hh",
+                "format": "JJ:NN"
+              },
+              {
+                "period": "DD",
+                "format": "MM/DD"
+              },
+              {
+                "period": "WW",
+                "format": "MMM DD"
+              },
+              {
+                "period": "MM",
+                "format": "YYYY/MM"
+              },
+              {
+                "period": "YYYY",
+                "format": "YYYY"
+              }
+            ],
+            "parseDates": true
+          },
+          "chartCursor": {
+            "enabled": true,
+            "categoryBalloonDateFormat": "MM/DD,YYYY",
+            "cursorColor": "#1ABB9C",
+            "tabIndex": 0
+          },
+          "trendLines": [],
+          "graphs": [
+            {
+              "bullet": "round",
+              "id": "AmGraph-1",
+              "title": "大買家網路店",
+              "valueField": "column-1"
+            },
+            {
+              "bullet": "round",
+              "id": "AmGraph-2",
+              "title": "燦坤快3",
+              "valueField": "column-2"
+            },
+            {
+              "bullet": "round",
+              "bulletBorderThickness": 0,
+              "id": "AmGraph-3",
+              "title": "PChome線上購物",
+              "valueField": "column-3"
+            },
+            {
+              "bullet": "round",
+              "id": "AmGraph-4",
+              "title": "東森購物",
+              "valueField": "column-4"
+            },
+            {
+              "bullet": "round",
+              "bulletBorderThickness": 3,
+              "id": "AmGraph-5",
+              "title": "udn買東西",
+              "valueField": "column-5"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-6",
+              "title": "friDay購物 x GoHappy",
+              "valueField": "column-6"
+            },
+            {
+              "bullet": "square",
+              "bulletBorderThickness": 0,
+              "id": "AmGraph-7",
+              "title": "森森購物",
+              "valueField": "column-7"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-8",
+              "title": "Yahoo奇摩購物中心",
+              "valueField": "column-8"
+            },
+            {
+              "bullet": "square",
+              "id": "AmGraph-9",
+              "tabIndex": 5,
+              "title": "樂天市場購物網",
+              "valueField": "column-9"
+            },
+          ],
+          "guides": [],
+          "valueAxes": [
+            {
+              "id": "ValueAxis-1",
+              "stackType": "100%",
+              "dateFormats": [
+                {
+                  "period": "fff",
+                  "format": "JJ:NN:SS"
+                },
+                {
+                  "period": "ss",
+                  "format": "JJ:NN:SS"
+                },
+                {
+                  "period": "mm",
+                  "format": "JJ:NN"
+                },
+                {
+                  "period": "hh",
+                  "format": "JJ:NN"
+                },
+                {
+                  "period": "DD",
+                  "format": "MM/DD"
+                },
+                {
+                  "period": "WW",
+                  "format": "MMM DD"
+                },
+                {
+                  "period": "MM",
+                  "format": "MM/DD"
+                },
+                {
+                  "period": "YYYY",
+                  "format": "YYYY"
+                }
+              ],
+              // "title": "Axis title"
+            }
+          ],
+          "allLabels": [],
+          "balloon": {},
+          "export": {
+            // "enabled": false
+            "enabled": true
+          },
+          "legend": {
+            "enabled": true,
+            "useGraphSettings": true
+          },
+          // "titles": [
+          //   {
+          //     "id": "Title-1",
+          //     "size": 15,
+          //     "text": "Chart Title"
+          //   }
+          // ],
+          "dataProvider": [
+            {
+              "date": "2017-10-01",
+              "column-1":  20,
+              "column-2":  12,
+              "column-3":  20,
+              "column-4":  50,
+              "column-5":  20,
+              "column-6":  25,
+              "column-7":  20,
+              "column-9":  35,
+              "column-8":  76
+            },
+            {
+              "date": "2017-10-02",
+              "column-1": 35,
+              "column-2": 45,
+              "column-3": 35,
+              "column-4": 55,
+              "column-5": 35,
+              "column-6": 32,
+              "column-7": 15,
+              "column-9": 35,
+              "column-8": 16            },
+            {
+              "date": "2017-10-03",
+              "column-1": 10,
+              "column-2": 45,
+              "column-3": 83,
+              "column-4": 23,
+              "column-5": 43,
+              "column-6": 23,
+              "column-7": 78,
+              "column-9": 23,
+              "column-8": 97            },
+            {
+              "date": "2017-10-04",
+              "column-1": 28,
+              "column-2": 22,
+              "column-3": 82,
+              "column-4": 32,
+              "column-5": 52,
+              "column-6": 21,
+              "column-7": 23,
+              "column-9": 7,
+              "column-8": 21
+            },
+            {
+              "date": "2017-10-05",
+              "column-1": 12,
+              "column-2": 12,
+              "column-3": 12,
+              "column-4": 12,
+              "column-5": 12,
+              "column-6": 12,
+              "column-7": 12,
+              "column-9": 12,
+              "column-8": 12
+            },
+            {
+              "date": "2017-10-06",
+              "column-1": 3,
+              "column-2": 3,
+              "column-3": 73,
+              "column-4": 83,
+              "column-5": 93,
+              "column-6": 83,
+              "column-7": 53,
+              "column-9": 13,
+              "column-8": 33
+            },
+            {
+              "date": "2017-10-07",
+              "column-1": 12,
+              "column-2": 29,
+              "column-3": 92,
+              "column-4": 72,
+              "column-5": 32,
+              "column-6": 42,
+              "column-7": 22,
+              "column-9": 72,
+              "column-8": 22
+            }
+          ]
+        }
+      );
+  </script>
+</body>
+</html>

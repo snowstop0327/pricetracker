@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>價格監控品牌端</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="asset/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="asset/images/favicon@2x.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="asset/images/favicon@3x.png">
+  <!-- Main styles for this application -->
+  <link href="asset/stylesheets/style.css" rel="stylesheet">
+</head>
+<body class="app header-fixed">
+  <div class="wrapper">
+    <header class="main-header">
+      <nav class="app-header navbar navbar-static-top">
+        <button class="navbar-toggler sidebar-toggler" type="button">☰</button>
+        <img src="asset/images/main_logo.svg" alt="價格監控" class="main-logo">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-cog"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="#" class="dropdown-item"><i class="fa fa-gear"></i>重設密碼</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i>登出</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <aside class="sidebar">
+      <div class="brand-logo">
+        <!-- logo for regular state and mobile devices -->
+        <img src="asset/images/brand_logo.svg" alt="品牌logo名稱">
+      </div>
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-dashboard"></i>
+              總覽
+            </a>
+          </li>
+          <li class="nav-item nav-dropdown">
+            <a href="#" class="nav-link nav-dropdown-toggle">
+              <i class="fa fa-folder"></i>
+              品牌名稱
+            </a>
+            <ul class="nav-dropdown-items">
+              <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-link nav-dropdown-toggle">
+                  <i class="fa fa-caret-right"></i>
+                  分類第一層
+                </a>
+                <ul class="nav-dropdown-items">
+                  <li class="nav-item nav-dropdown">
+                    <a href="#" class="nav-link nav-dropdown-toggle">
+                      <i class="fa fa-caret-right"></i>
+                      分類第二層
+                    </a>
+                    <ul class="nav-dropdown-items">
+                      <li class="nav-item">
+                        <a href="product.html" class="nav-link">商品型號001</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item nav-dropdown">
+                <a href="#" class="nav-link nav-dropdown-toggle">
+                  <i class="fa fa-caret-right"></i>
+                  分類第一層02
+                </a>
+                <ul class="nav-dropdown-items">
+                  <li class="nav-item">
+                    <a href="product.html" class="nav-link">【Apple】iMac MK482TA 27吋 桌上型電腦</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="marketData.html" class="nav-link">
+              <i class="fa fa-bar-chart-o"></i>
+              市場數據分析
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="industryData.html" class="nav-link">
+              <i class="fa fa-book"></i>
+              產業地圖分析月報
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main">
+        <div class="animated fadeIn market-bg">
+          <div class="main-box">
+            <h2 class="text-center h1">市場數據分析為額外提供的客製化報表，若有興趣，歡迎隨時與我們聯絡。</h2>
+            <a href="#" class="btn bg-primary">聯絡我們</a>
+          </div>
+        </div>
+    </main>
+    <footer class="app-footer">
+      <div class="ccc text-center">
+          © 2017 EZprice
+      </div>
+    </footer>
+  </div>
+  <!-- Jquery scripts -->
+    <script type="text/javascript" src="asset/javascripts/jquery-slim.min.js"></script>
+
+  <!-- main scripts -->
+    <script type="text/javascript" src="asset/javascripts/main-dist.js"></script>
+    <script>
+      $.material.init();
+    </script>
+</body>
+</html>
