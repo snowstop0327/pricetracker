@@ -676,10 +676,11 @@ table.product-table {
 }
 
 .main-white-logo {
-  position: absolute;
-  top: 55px;
-  left: calc(50% - 135px);
+  // position: absolute;
+  // top: 55px;
+  // left: calc(50% - 135px);
   width: 270px;
+  margin-bottom: 10px;
 }
 
 .capcha {
@@ -692,6 +693,7 @@ table.product-table {
 .login-card {
   border-radius: 2px;
   box-shadow: 0 0 14px rgba($black, 0.6);
+  max-width: 360px;
 }
 
 //
