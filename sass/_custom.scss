@@ -28,13 +28,16 @@ footer a {
     display: flex;
     align-item: center;
     justify-content: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
+    align-content: center;
     will-change:background-color;
     transition: .3s cubic-bezier(.25,.8,.25,1);
-    color: $blue-dark;
-    &:hover {
+    color: $blue-dark !important;
+    text-align:center;
+    i {
+      padding: 0.7rem;
+      border-radius: 50%;
+    }
+    &:hover i {
       background-color: rgba($gray-200,0.5);
     }
     &:focus {
@@ -49,8 +52,8 @@ footer a {
 
 .sidebar {
   max-width: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
+  // overflow-y: auto;
+  overflow: hidden;
   -webkit-overflow-scrolling: touch;
   padding: 0 0 100px;
   pointer-events: auto;
@@ -159,9 +162,9 @@ nav.app-header.navbar  {
 }
 
 .brand-logo {
-  width: 228px;
-  height: 72px;
-  margin: 16px;
+  width: 230px;
+  height: 70px;
+  margin: 16px auto;
 }
 .sidebar-nav {
   width: 100%;
@@ -767,6 +770,9 @@ table.product-table {
     }
   }
   .overlay {
+    display: block;
+  }
+  .product-item .text-right span.small {
     display: block;
   }
 
