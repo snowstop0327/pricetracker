@@ -100,6 +100,7 @@
                 "十一月",
                 "十二月"
             ],
+            customRangeLabel: '自訂範圍',
             // daysOfWeek: moment.weekdaysMin(),
             // monthNames: moment.monthsShort(),
             firstDay: moment.localeData().firstDayOfWeek()

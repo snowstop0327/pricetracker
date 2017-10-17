@@ -155,12 +155,12 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group row justify-content-end">
+                <div class="form-group row">
                   <div class="col-sm-5 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                    <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -285,7 +285,16 @@
   <!-- timepicker script -->
     <script type="text/javascript">
       $(function() {
-          $('input[name="daterange"]').daterangepicker();
+          $('input[name="daterange"]').daterangepicker({
+            ranges: {
+             '今天': [moment(), moment()],
+             '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+             '最近7天': [moment().subtract(6, 'days'), moment()],
+             '最近30天': [moment().subtract(29, 'days'), moment()],
+             '這個月': [moment().startOf('month'), moment().endOf('month')],
+             '上個月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+            }
+          });
       });
     </script>
 

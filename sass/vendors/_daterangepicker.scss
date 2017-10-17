@@ -181,6 +181,7 @@
     color: theme-color("primary");
     padding: 3px 12px;
     margin-bottom: 8px;
+    font-weight: bold;
     cursor: pointer; }
     .ranges li:hover {
       background: theme-color("primary");
@@ -190,6 +191,11 @@
       background: theme-color("primary");
       border: 1px solid theme-color("primary");
       color: #fff; }
+.range_inputs {
+  .applyBtn {
+    font-weight: bold;
+  }
+}
 
 /*  Larger Screen Styling */
 @media (min-width: 564px) {
@@ -226,7 +232,7 @@
 @media (min-width: 730px) {
   .daterangepicker .ranges {
     width: auto;
-    float: left; }
+    float: right; }
   .daterangepicker .calendar.left {
     clear: none; } }
 

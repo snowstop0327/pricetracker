@@ -119,6 +119,7 @@
     padding: $sidebar-nav-link-padding-y $sidebar-nav-link-padding-x;
     color: $sidebar-nav-link-color;
     text-decoration: none;
+    font-size: 1rem;
     background: $sidebar-nav-link-bg;
     @include borders($sidebar-nav-link-borders);
     @if $enable-sidebar-nav-rounded {

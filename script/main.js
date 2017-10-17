@@ -22,6 +22,8 @@
 
 // include stupidtable
 //@prepros-append vendors/stupidtable.js
+//
+//@prepros-append vendors/jquery.tablesorter.min.js
 
 
 // my js

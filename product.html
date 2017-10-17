@@ -195,12 +195,12 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group row justify-content-end">
+                <div class="form-group row">
                   <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                    <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -219,12 +219,12 @@
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div>
                 </div>
-                <div class="form-group row justify-content-end">
+                <div class="form-group row">
                   <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
-                    <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                    <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
                   <!-- /.input group -->
                 </div>
@@ -267,8 +267,8 @@
                         <th class="min-w">通路名稱</th>
                         <th>商品名稱</th>
                         <th class="text-right min-w">通路價格</th>
-                        <th class="text-right"  data-sort="int"><span data-toggle="tooltip" title="通路價格與破價標準的價差。">價差<i class="fa fa-question-circle"></i></span></th>
-                        <th class="text-right"  data-sort="float"><span data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。">價差率<i class="fa fa-question-circle"></i></span></th>
+                        <th class="text-right min-w" data-sort="int">價差<em class="fa fa-question-circle" data-toggle="tooltip" title="通路價格與破價標準的價差。"></em><i class="fa fa-sort"></i></th>
+                        <th class="text-right min-w" data-sort="float">價差率<em class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></em><i class="fa fa-sort"></i></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -378,22 +378,31 @@
     <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css">
 
   <!-- timepicker script -->
-    <script type="text/javascript">
-      $(function() {
-          $('input[name="daterange"]').daterangepicker();
-      });
-    </script>
-
-  <!-- tooltip script -->
-    <script type="text/javascript">
-      $(function () {
-        $('[data-toggle="tooltip"]').tooltip()
-      })
-    </script>
+   <script type="text/javascript">
+    $(function() {
+        $('input[name="daterange"]').daterangepicker({
+          ranges: {
+           '今天': [moment(), moment()],
+           '昨天': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+           '最近7天': [moment().subtract(6, 'days'), moment()],
+           '最近30天': [moment().subtract(29, 'days'), moment()],
+           '這個月': [moment().startOf('month'), moment().endOf('month')],
+           '上個月': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          }
+        });
+    });
+  </script>
   <!-- stupidtable script -->
     <script type="text/javascript">
-      $(function () {
-        $('#product01').stupidtable();
+      // $(function () {
+      //   $('#product01').stupidtable();
+      //   $('.sorting-desc').click(function(event) {
+      //     $('.sorting-desc > i').toggleClass('selector');
+      //   });
+      // });
+      $(function(){
+        $('#product01').tablesorter(); 
+        $('[data-toggle="tooltip"]').tooltip();
       });
     </script>
   <script>
@@ -828,7 +837,7 @@
           "valueAxes": [
             {
               "id": "ValueAxis-1",
-              "stackType": "100%",
+              // "stackType": "100%",
               "dateFormats": [
                 {
                   "period": "fff",
@@ -874,7 +883,8 @@
           },
           "legend": {
             "enabled": true,
-            "useGraphSettings": true
+            "useGraphSettings": true,
+            "valueText": "[[value]]%"
           },
           // "titles": [
           //   {
