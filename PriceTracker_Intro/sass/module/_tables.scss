@@ -1,0 +1,9 @@
+.thead {
+	background-color: $white;
+}
+
+@include mobile() {
+	.thead {
+		display: none;
+	}
+}

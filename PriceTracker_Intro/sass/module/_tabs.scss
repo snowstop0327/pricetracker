@@ -1,0 +1,43 @@
+$tabs-active-color: theme-color("success");
+.tabs {
+	@include block();
+	align-items: stretch;
+  display: flex;
+  font-size: $font-size-base;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: $gray-100;
+  color: $gray-500;
+  span {
+  	align-items: center;
+  	display: flex;
+  	justify-content: center;
+  }
+  .active {
+    border-bottom: 1px solid $tabs-active-color;
+    color: $tabs-active-color;
+  }
+  &.is-toggle {
+    @include border-style(1px, $tabs-active-color); 
+    border-radius: 2px;
+    .active {
+    	background: $tabs-active-color;
+    	color: $white;
+    	border: 0;
+
+    }
+  }
+  // @include mobile-base() {
+  //   // margin: 8px 0;
+  // }
+
+}
+
+.tabs-item {
+  display: none;
+  &.active {
+    display: block;
+  }
+}

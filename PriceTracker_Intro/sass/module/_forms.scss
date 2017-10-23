@@ -1,0 +1,136 @@
+.contact-form {
+  flex-wrap: wrap;
+  margin: 0 auto;
+  @include set-center;
+}
+.form-group {
+  position: relative;
+  padding-bottom: 7px;
+  margin: 28px 0 0 0;
+  .form-control {
+    margin-bottom: 7px;
+    width: 100%;
+    height: 38px;
+    padding: 7px 0;
+    font-size: 16px;
+    line-height: 1.42857143;
+  }
+  .invailid-block {
+    display: none;
+    position: absolute;
+  }
+  &.is-empty {
+    label {
+      color: $gray-117;
+      position: absolute;
+      top: 0;
+      left: 0.75rem;
+      height: 100%;
+      font-size: 1rem;
+      cursor: text;
+      -webkit-transition: -webkit-transform .2s ease-out;
+      transition: -webkit-transform .2s ease-out;
+      transition: transform .2s ease-out;
+      transition: transform .2s ease-out, -webkit-transform .2s ease-out;
+      -webkit-transform-origin: 0% 100%;
+      transform-origin: 0% 100%;
+      text-align: initial;
+      -webkit-transform: translateY(12px);
+      transform: translateY(12px);
+      pointer-events: none;
+    }
+  }
+  label {
+    color: $gray-117;
+    -webkit-transform: translateY(-14px) scale(0.8);
+    transform: translateY(-14px) scale(0.8);
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    position: absolute;
+    top: 0;
+    left: 0.75rem;
+    height: 100%;
+  }
+  textarea.form-control {
+    resize: none;
+    height: 80px;
+  }
+  &.is-focused {
+    .form-control {
+      outline: 0;
+      background-size: 100% 2px,100% 1px;
+      box-shadow: none;
+      transition-duration: .3s;
+    }
+    label {
+      color: $primary;
+      -webkit-transform: translateY(-14px) scale(0.8);
+      transform: translateY(-14px) scale(0.8);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+      font-size: 1rem;
+    }
+  }
+  // error state
+  &.has-error {
+    label {
+      color: $red;
+    }
+    .form-control {
+      background-image: linear-gradient($red, $red),linear-gradient($gray-155, $gray-155);
+      // border-bottom: 2px solid $red;
+      // box-shadow: 0 1px 0 0 $red;
+      &.is-valid {
+        background-image: linear-gradient($red, $red),linear-gradient($red, $red);
+      }
+    }
+    .invailid-block {
+      color: $red;
+      display: block;
+      margin-top: -5px;
+    }
+  }
+}
+.skin-blue .form-control, .skin-blue .form-group .form-control {
+  background-image: linear-gradient($primary, $primary),linear-gradient($gray-155, $gray-155);
+}
+.skin-blue .form-group.is-focused .form-control {
+  background-image: linear-gradient($primary, $primary),linear-gradient($gray-155, $gray-155);  
+}
+
+.form-control, .form-group .form-control {
+  border: 0;
+  background-image: -webkit-gradient(linear,left top,left bottom,from($primary),to($primary)),-webkit-gradient(linear,left top,left bottom,from($gray-155),to($gray-155));
+  background-image: -webkit-linear-gradient($primary,$primary),-webkit-linear-gradient($gray-155,$gray-155);
+  background-image: -o-linear-gradient($primary,$primary),-o-linear-gradient($gray-155,$gray-155);
+  background-image: linear-gradient($primary,$primary),linear-gradient($gray-155,$gray-155);
+  -webkit-background-size: 0 2px,100% 1px;
+  background-size: 0 2px,100% 1px;
+  background-repeat: no-repeat;
+  background-position: center bottom,center -webkit-calc(100% - 1px);
+  background-position: center bottom,center calc(100% - 1px);
+  background-color: rgba(0,0,0,0);
+  -webkit-transition: background 0s ease-out;
+  -o-transition: background 0s ease-out;
+  transition: background 0s ease-out;
+  float: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.btn-large {
+  width: 100%;
+  min-height: 40px;
+  background: $primary;
+  color: $white;
+  font-size: $font-size-base;
+  margin: 30px;
+  padding: 6px 16px;
+  border-radius: $button-radius;
+  text-shadow: 1px 1px 1px rgba($black,0.5);
+  transition: 0.3s all ease-out;
+  &:hover {
+    background: darken($primary,10%);
+  }
+}

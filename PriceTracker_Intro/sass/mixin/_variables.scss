@@ -1,0 +1,43 @@
+
+// color
+
+$primary: #1ABB9C;
+$red: #dc3545;
+$blue: #185C96;
+$blue-dark: #2A3F54;
+$blue-darker: #031D2E;
+$white: #fff;
+$gray-244: #F4F4F4;
+$gray-226: #E2E2E2;
+$gray-155: #9B9B9B;
+$gray-117: #757575;
+$gray-74: #4A4A4A;
+$black: #000;
+
+
+// button
+
+$button-radius: 3px;
+
+
+// breakpoint
+
+$mobile-width: 480px !default;
+
+$tablet-width: 768px !default;
+$desktop-width: 1024px !default;
+$widescreen-width: 1192px !default;
+$fullhd-width: 1408px !default;
+
+
+
+// font
+
+$family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "microsoft jhenghei", "microsoft mhei", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$font-size-base: 1rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:   1.25rem !default;
+$font-size-sm:   .875rem !default;
+
+// bg-linear-gradient
+
+$linear-bg:linear-gradient(140deg, $blue-darker 20%, $primary 96%); 
