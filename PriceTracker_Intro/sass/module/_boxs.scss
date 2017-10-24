@@ -16,8 +16,10 @@
 		@include border-style(1px, $gray-226);
 		box-shadow: 0 2px 4px rgba($black, 0.5);
 		padding: 20px;
+		margin-bottom: 30px;
 		p {
 			margin: 0;
+			font-size: 1.2rem;
 		}
 	}
 }
