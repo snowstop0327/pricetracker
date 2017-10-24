@@ -14,5 +14,6 @@ $(window).scroll(function(){
 
 $('.navbar-toggler').click(function(event) {
 	/* Act on the event */
+  $(this).toggleClass('icon-android-close');
 	$('.navbar-end').toggleClass('open');
 });
