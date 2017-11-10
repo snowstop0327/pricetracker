@@ -726,6 +726,7 @@ table.product-table {
     opacity: 0;
   }
 }
+
 // .tablesorter-header {
 //   position: relative;
 // }
@@ -749,7 +750,73 @@ table.product-table {
 .tablesorter-header:focus {
   outline: 0;
 }
-
+.show-more-shop {
+  position: relative;
+  span {
+    border-bottom: 1px dotted $gray-500;
+  }
+  ul {
+    list-style: none;
+    display: none;
+    position: absolute;
+    top: 135%;
+    left: 50%;
+    margin: 0;
+    margin-left: -70px;
+    padding: 5px;
+    background: $white;
+    width: 140px;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 2px rgba($black,0.3);
+    li {
+      padding: 5px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 5px 10px 5px;
+      border-color: transparent transparent #FFF transparent;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -5px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 7px 10px 7px;
+      border-color: transparent transparent $gray-200 transparent;
+      bottom: 100%;
+      left: 50%;
+      margin-left: -7px;
+    }
+    li:first-child {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 120%;
+        top: -10px;
+        z-index: -1;
+        left: 0;
+      }
+    }
+  }
+  &:hover {
+    ul {
+      display: block;
+      opacity: 1;
+    }
+  }
+}
 
 //
 // Mobile layout
