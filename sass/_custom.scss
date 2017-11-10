@@ -760,7 +760,7 @@ table.product-table {
     list-style: none;
     display: none;
     position: absolute;
-    top: 135%;
+    top: 150%;
     left: 50%;
     margin: 0;
     margin-left: -70px;
@@ -800,14 +800,18 @@ table.product-table {
       left: 50%;
       margin-left: -7px;
     }
+    &.top-less {
+      top: 105%;
+    }
     &.tooltip-right {
       top: -14px;
       left: 110%;
       margin: 0;
       &:before {
         right: 100%;
+        top: 0;
         bottom: auto;
-        margin-top: 9px;
+        margin-top: 13px;
         margin-left: auto;
         left: auto;
         border-width:5px;
@@ -815,8 +819,9 @@ table.product-table {
       }
       &:after {
         right: 100%;
+        top: 0;
         bottom: auto;
-        margin-top: -21px;
+        margin-top: 11px;
         margin-left: auto;
         left: auto;
         border-width: 7px;
@@ -844,7 +849,15 @@ table.product-table {
       opacity: 1;
     }
   }
+  strong.h3 {
+    color: $body-color;
+  }
+  i {
+    color: $body-color;
+    font-style: normal;
+  }
 }
+
 .price-tool {
   margin-bottom: 1rem;
 }
