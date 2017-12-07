@@ -1,0 +1,77 @@
+.clearfix {
+  @include clearfix();
+}
+.text-hide {
+	text-indent: -10000px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+.flex-box {
+	display: flex;
+}
+.text-center {
+  text-align: center !important;
+}
+// .sticky-area.sticky {
+// 	position: fixed !important;
+// 	top: 0;
+// 	width: auto;
+// 	z-index: 5000;
+// }
+.full-width {
+	position: relative;
+    margin: 0 -10px 10px !important;
+}
+.max-600 {
+  max-width: 600px;
+  margin: 0 auto;
+}
+@media screen and (min-width: 0) and (max-width: $tablet-width - 1px) {
+	#sticky-wrapper.is-sticky {
+		.sticky-area {
+			width: 100% !important;
+			left: 0;
+			right: 0;
+			border-radius: 0;
+			.card-tabs-content,.tabs-item {
+				display: none;
+			}
+		}
+	}
+}
+$go-top-size: 45px;
+button.go-top {
+  width: $go-top-size;
+  height: $go-top-size;
+  position: fixed;
+  border: none;
+  border-radius: 50%;
+  background: theme-color("success");
+  color: $white;
+  right: 16px;
+  bottom: 70px;
+  box-sizing: border-box;
+  visibility: hidden;
+  transition: opacity .3s 0s, visibility 0s .3s;
+  z-index: 60;
+  padding: 0;
+  cursor: pointer;
+
+  &:before {
+  	font-size: 24px;
+  }
+
+  &:focus {
+  	outline: 0;
+  }
+
+  &.is-visible {
+    visibility: visible;
+    opacity: 1;
+    // z-index: 210;
+  }
+
+  &.fade-out {
+    opacity: 0.5;
+  }
+}

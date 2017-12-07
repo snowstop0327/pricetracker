@@ -1,0 +1,360 @@
+.full-bg {
+	position: relative;
+	width: 100%;
+  margin: 0;
+	background: $linear-bg;
+  padding-top: 70px;
+  .top-image {
+    
+  }
+}
+.top-title {
+  color: $white;
+  text-align: center;
+	h1 {
+    font-size:  1.5rem;
+    // padding-top: 70px;
+    margin-bottom: 10px;
+		strong {
+      font-size: 2rem;
+      display: block;
+		}
+	}
+  a {
+    display: inline-block;
+    text-decoration: none;
+    max-width: 170px; 
+    transition: 0.3s all ease-out;
+    margin: 0 auto;
+    &.btn-outline {
+      padding: 6px 16px;
+      color: $white;
+      border-radius: $button-radius;
+      @include border-style(1px, $white);
+      &:hover {
+        background-color: $primary;
+        color: $white;
+        @include border-style(1px, $primary);
+      }
+    }
+  }
+}
+section {
+  h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+  h3 {
+  	font-size: 1.4rem;
+  }
+  h4 {
+  	font-size: 1.2rem;
+  }
+  .btn-outline {
+    min-width: 180px;
+    margin: 0 auto;
+    padding: 6px 16px;
+    border-radius: $button-radius;
+    @include border-style(1px, $primary);
+    color: $primary;
+    text-decoration: none;
+    &:hover {
+      background-color: $primary;
+      color: $white;
+      @include border-style(1px, $primary);
+    }
+  }
+}
+.section-area1 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  h2 {
+    margin: 2rem 0;
+  }
+  h3 {
+    margin-bottom: 10px;
+  }
+}
+
+.section-area2, .section-area3, .section-area4 {
+  padding: 30px 0 40px;
+  overflow: hidden;
+  a {
+    transition: 0.3s all ease-out;
+  }
+  figure {
+    // overflow: hidden;
+    min-height: 400px;
+    margin: 0;
+  }
+  figcaption {
+    position: relative;
+    ul {
+      margin-top: 40px;
+      li {
+        display: flex;
+        align-items: center;
+        margin: 18px 0;
+        &:before {
+          color: $primary;
+          display: inline-block;
+          font-size: 50px;
+          width: 50px;
+          height: 50px;
+          line-height: 62px;
+          text-align: center;
+          vertical-align: middle;
+          margin-right: 10px;
+        }
+        a.btn-outline {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+.section-area2 {
+  h2 {
+    display: inline;
+  }
+  .support-text {
+    color: $gray-226;
+    text-transform:uppercase;
+    font-size: 2.5rem;
+    position: absolute;
+    top: 25px;
+    left: 250px;
+    z-index: -1;
+    letter-spacing: 2px;
+  }
+  .image-box {
+    position: relative;
+    z-index: 2;
+    order: 2;
+    @include set-center;
+  }
+}
+
+.section-area3 {
+  h2 {
+    margin-bottom: 20px;
+  }
+  ul {
+    display: inline-flex;
+    // flex-wrap: wrap;
+    // @include set-center;
+  }
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    // @include set-center;
+    text-align: center;
+    algin-items: center;
+    &:before {
+      width: 100% !important;
+      display: block;
+      margin: 0 auto !important;
+    }
+    span {
+      width: 100%;
+      display: block;
+    }
+  }
+  .image-box {
+    position: relative;
+    // img {
+    //   position: absolute;
+    //   right: 20px;
+    //   width: 824px;
+    //   max-width: 824px;
+    // }
+  }
+}
+
+.section-area4 {
+  .image-box {
+    order: 2;
+    position: relative;
+    z-index: 2;
+    // img {
+    //   position: absolute;
+    //   left: 20px;
+    //   width: 824px;
+    //   max-width: 824px;
+    // }
+  }
+}
+
+.contact-area {
+  width: 100%;
+  padding: 20px 15px;
+  background: $gray-244;
+  text-align: center;
+  .section-title {
+    display: block;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+}
+
+.btn-base {
+  background: $primary;
+  min-width: 180px;
+  color: $white;
+  text-shadow: 1px 1px 1px rgba($black, 0.5);
+  text-decoration: none;
+  padding: 12px 16px;
+  border-radius: $button-radius;
+  transition: 0.3s all ease-out;
+  &:hover {
+    background: darken($primary, 5%);
+  }
+}
+
+// breakpoint樣式
+// 0~480
+@include mobile(){
+  .section-area3, .section-area4 {
+    text-align: center;
+  }
+}
+
+// >481
+@include middle-device(){
+}
+
+// >768
+@include tablet(){
+  .full-bg {
+    height: 450px;
+    .top-image {
+      position: absolute;
+      width: 70%;
+      left: calc(50% - 160px);
+      top: 300px; 
+    }
+  }
+  .top-title {
+    text-align: left;
+    h1 {
+      font-size: 2.2rem;
+      margin-top: 65px;
+      margin-bottom: 50px; 
+      strong {
+        font-size: 3rem;
+      }
+    }
+    a {
+      margin: 0;
+    }
+  }
+  section {
+    h2 {
+      font-size: 2.2rem;
+    }
+  }
+  .section-area1 {
+    padding-top: 200px;
+    padding-bottom: 100px;
+    min-height: 60vh;
+    h2 {
+      margin: 2rem;
+    }
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+  .section-area2 {
+    .support-text {
+      position: absolute;
+      left: 310px;
+      top: -10px;
+      font-size: 64px;
+      letter-spacing: 12px;
+    }
+  }
+  .section-area3 {
+    .image-box {
+      img {
+        position: absolute;
+        top: calc(50% - 241px);
+        right: 20px;
+        width: 824px;
+        max-width: 824px;
+      }
+    }
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+  .section-area4 {
+    figure {
+      min-height: 500px;
+    }
+    .image-box {
+      img {
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        // width: 824px;
+        max-width: 824px;
+      }
+    }
+  }
+  .section-area2, .section-area3, .section-area4 {
+    padding: 50px 0;
+  }
+  .contact-area {
+    padding: 60px;
+    .section-title {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// >1024
+@include desktop(){
+  .full-bg {
+    height: 600px;
+    .top-image {
+      width: 70%;
+      left: calc(50% - 280px);
+      top: 250px; 
+    }
+  }
+  .section-area1 {
+    min-height: 40vh;
+  }
+  .section-area4 {
+    min-height: 700px;
+  }
+  .section-area2, .section-area3, .section-area4 {
+    padding: 100px 32px;
+  }
+}
+
+// 1192~1408
+@include widescreen(){
+  .section-area2, .section-area3, .section-area4 {
+    overflow: hidden;
+    width: 100%;
+    max-width: none;
+  }
+}
+
+// >1408
+@include fullhd(){
+  .full-bg {
+    .top-image {
+      width: 60%;
+      top: 150px;
+    }
+  }
+  .section-area2, .section-area3, .section-area4 {
+    overflow: visible;
+  }  
+}

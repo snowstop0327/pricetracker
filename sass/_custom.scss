@@ -46,7 +46,7 @@ footer a {
   }
   .dropdown-toggle {
     margin-right: 8px;
-    font-size: $font-size-base;
+    font-size: $navbar-toggler-font-size;
   }
 }
 
@@ -155,6 +155,7 @@ nav.app-header.navbar  {
 
 .content-top {
   padding-top: 16px;
+  padding-bottom: 8px;
   h1 {
     font-weight: bold;
     color: $blue-dark;
@@ -222,6 +223,10 @@ nav.app-header.navbar  {
   width: 100%;
   height: 400px;
 }
+#chart-channel-div1 {
+  width: 100%;
+  height: 400px;
+}
 .chartdiv a {
   display: none !important;
 }
@@ -240,6 +245,12 @@ th[data-sort] {
   li {
     padding: 0.5rem;
   }
+}
+
+.text-update {
+  color: $text-muted !important;
+  min-height: 18px;
+  display: block;
 }
 
 .product-item {
@@ -341,6 +352,8 @@ th[data-sort] {
 }
 
 table.product-table {
+  margin-bottom: 0;
+  border: 1px solid #E2E2E2;
   tbody {
     tr {
       color: $gray-600;
@@ -374,6 +387,95 @@ table.product-table {
   }
 }
 
+.scroll-table {
+  border: 1px solid $table-border-color;
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    // text-align: center;
+    li {
+      padding: 0.5rem;
+      &:first-child {
+        max-width: 60px;
+        text-align: center;
+      }
+      &:nth-child(2) {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+      &:nth-child(3), {
+        max-width: 100px;
+        text-align: center;
+      }
+      &:nth-child(4) {
+        max-width: 65px;
+        text-align: right;
+        padding-right: 15px;
+      }
+    }
+  }
+  .table-head {
+    border-bottom: (2 * $table-border-width) solid $table-border-color;
+  }
+  .table-body {
+    ul {
+      border-bottom: $table-border-width solid $table-border-color;
+      height: 40px;
+      &:nth-child(even) {
+        background-color: $gray-100;
+      }
+      @include hover {
+        background-color: $table-hover-bg !important;
+      }
+    }
+  }
+}
+.change-up, .change-down {
+  font-size: $font-size-lg;
+  display: inline-block;
+  margin-left: 5px;
+}
+.change-up {
+  color: $red;
+  &:before {
+    content: "\f062";
+  }
+
+}
+.change-down {
+  color: $green;
+  &:before {
+    content: "\f063";
+  }
+}
+
+.channel-table {
+  img {
+    max-height: 90px;
+  }
+  tbody {
+    td {
+    }
+    tr {
+      color: color("blue-dark");
+      border-bottom: 1px solid transparent;
+      @include transition($btn-transition);
+      &:hover { 
+        background: lighten(theme-color("primary"),55%);
+        td {
+          border-top: 1px solid theme-color("primary");
+          border-bottom: 1px solid theme-color("primary");
+        }
+      }
+      &:last-child {
+        border-bottom: $table-border-width solid $table-border-color;
+      }
+    }
+  }
+}
+
 .table-product-link {
   // max-width: 380px;
   display: block;
@@ -381,6 +483,74 @@ table.product-table {
 
 .min-w {
   min-width: 95px;
+}
+.min-w55 {
+  min-width: 55px;
+}
+.min-w110 {
+  min-width: 110px;
+}
+.min-w122 {
+  min-width: 122px;
+}
+
+.gray-bg {
+  background: $gray-100;
+}
+
+.channel-select {
+  position: relative;
+  display: block;
+  width: 15rem;
+  height: 2.5rem;
+  line-height: 2.5;
+  overflow: hidden;
+  border-radius: 0.25rem;
+  select {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 0 0.5rem;
+    cursor: pointer;
+    outline: 0;
+    box-shadow: none;
+    border: 1px solid $table-border-color;
+    background-image: none;
+    background-color: $white;
+    color: $blue-dark;
+  }
+  span.fa {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0 1rem;
+    pointer-events: none;
+    background-color: $white;
+    border-radius: 0.25rem;
+    border-top: 1px solid $table-border-color;
+    border-right: 1px solid $table-border-color;
+    border-bottom: 1px solid $table-border-color;
+  }
+  // &:after {
+  //   content: '\25BC';
+  //   position: absolute;
+  //   font-size: $font-size-base;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   padding: 0 1rem;
+  //   pointer-events: none;
+  //   transition: .25s all ease;
+  //   background-color: $white;
+  //   border-radius: 0.25rem;
+  //   border-top: 1px solid $table-border-color;
+  //   border-right: 1px solid $table-border-color;
+  //   border-bottom: 1px solid $table-border-color;
+  // }
 }
 
 // material style
@@ -803,6 +973,13 @@ table.product-table {
     &.top-less {
       top: 105%;
     }
+    &.bottom-right {
+      left: auto;
+      right: -50%;
+      &:before, &:after {
+        left: 76%;
+      }
+    }
     &.tooltip-right {
       top: -14px;
       left: 110%;
@@ -908,7 +1085,7 @@ table.product-table {
   .img-box {
     width: 100%;
   }
-
 }
+
 
 

@@ -13,6 +13,7 @@
 </head>
 <body class="app header-fixed">
   <div class="wrapper">
+    <!-- 頭部功能列 -->
     <header class="main-header">
       <nav class="app-header navbar navbar-static-top">
         <button class="navbar-toggler sidebar-toggler" type="button"><i class="fa fa-bars"></i></button><!-- <span>☰</span> -->
@@ -22,17 +23,20 @@
             <i class="fa fa-cog"></i>
           </button>
           <div class="dropdown-menu dropdown-menu-right">
-            <a href="#" class="dropdown-item"><i class="fa fa-gear"></i>重設密碼</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-key"></i>重設密碼</a>
             <a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i>登出</a>
           </div>
         </div>
       </nav>
     </header>
+    <!-- 側邊選單 -->
     <aside class="sidebar">
+      <!-- 品牌LOGO -->
       <div class="brand-logo">
         <!-- logo for regular state and mobile devices -->
         <img src="../asset/images/brand_logo.svg" alt="品牌logo名稱">
       </div>
+      <!-- 導覽列 -->
       <nav class="sidebar-nav">
         <ul class="nav">
           <li class="nav-item">
@@ -94,14 +98,18 @@
         </ul>
       </nav>
     </aside>
+    <!-- 行動版展開背景 -->
     <div class="overlay"></div>
+    <!-- 主要內容 開始 -->
     <main class="main">
       <div class="container-fluid">
         <div class="animated fadeIn">
+          <!-- 上方標題資訊 -->
           <div class="content-top clearfix">
             <h1 class="h4 float-left">總覽</h1>
             <span class="float-right" ">最後更新時間：2017.10.04  15:30</span>
           </div>
+          <!-- 四欄總數據 -->
           <div class="row">
             <div class="col-sm-6 col-lg-3">
               <div class="card bg-white card-body text-center">
@@ -128,6 +136,7 @@
               </div>
             </div>
           </div>
+          <!-- 破價商品數佔比/破價通路數佔比 -->
           <div class="row">
             <div class="col-md-6">
               <div class="card">
@@ -146,6 +155,7 @@
               </div>
             </div>
           </div>
+          <!-- 各通路破價商品數狀況 -->
           <div class="row">
             <div class="col-md-12">
               <div class="card">
@@ -170,6 +180,7 @@
               </div>
             </div>
           </div>
+          <!-- 今日破價商品 -->
           <div class="row">
             <div class="col-md-12">
               <div class="card">
@@ -350,6 +361,7 @@
               </div>
             </div>
           </div>
+          <!-- 今日破價商品-empty -->
           <div class="row">
             <div class="col-md-12">
               <div class="card">
@@ -428,7 +440,7 @@
         "type": "pie",
         "angle": 18,
         "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
-        "labelText": "[[title]]: [[value]]",
+        "labelText": "[[title]]: [[percents]]%",
         "depth3D": 17,
         "gradientType": "linear",
         "labelRadius": 30,
@@ -480,7 +492,7 @@
         "type": "pie",
         "angle": 18,
         "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
-        "labelText": "[[title]]: [[value]]",
+        "labelText": "[[title]]: [[percents]]%",
         "depth3D": 17,
         "gradientType": "linear",
         "labelRadius": 30,

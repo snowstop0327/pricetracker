@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>價格監控通路端 ｜ 我的最新低價</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="../asset/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../asset/images/favicon@2x.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../asset/images/favicon@3x.png">
+  <!-- Main styles for this application -->
+  <link href="../asset/stylesheets/style.css" rel="stylesheet">
+</head>
+<body class="app header-fixed">
+  <div class="wrapper">
+    <!-- 頭部功能列 -->
+    <header class="main-header">
+      <nav class="app-header navbar navbar-static-top">
+        <button class="navbar-toggler sidebar-toggler" type="button"><i class="fa fa-bars"></i></button><!-- <span>☰</span> -->
+        <img src="../asset/images/main_logo.svg" alt="價格監控" class="main-logo">
+        <div class="btn-group">
+          <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-cog"></i>
+          </button>
+          <div class="dropdown-menu dropdown-menu-right">
+            <a href="#" class="dropdown-item"><i class="fa fa-key"></i>重設密碼</a>
+            <a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i>登出</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- 側邊選單 -->
+    <aside class="sidebar">
+      <!-- 品牌LOGO -->
+      <div class="brand-logo">
+        <!-- logo for regular state and mobile devices -->
+        <img src="../asset/images/brand_logo.svg" alt="品牌logo名稱">
+      </div>
+      <!-- 導覽列 -->
+      <nav class="sidebar-nav">
+        <ul class="nav">
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fa fa-dashboard"></i>
+              總覽
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="myPrice.html" class="nav-link">
+              <i class="fa fa-file-text"></i>
+              我的最新低價
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="myProduct.html" class="nav-link">
+              <i class="fa fa-file-text"></i>
+              我的最新熱門商品
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="channelPrice.html" class="nav-link">
+              <i class="fa fa-file-text"></i>
+              追蹤通路低價
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="channelProduct.html" class="nav-link">
+              <i class="fa fa-file-text"></i>
+              追蹤通路熱門商品
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <!-- 行動版展開背景 -->
+    <div class="overlay"></div>
+    <!-- 主要內容 開始 -->
+    <main class="main">
+      <div class="container-fluid">
+        <div class="animated fadeIn">
+          <!-- 上方標題資訊 -->
+          <div class="content-top clearfix">
+            <h1 class="h4 float-left">我的最新低價</h1>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header">
+                  <!-- <h2 class="card-title"></h2> -->
+                  <div class="channel-select">
+                    <select name="cate" id="cate-selct">
+                      <option value="0">全部分類</option>
+                      <option value="1">平板電腦</option>
+                      <option value="2">生活用品</option>
+                      <option value="3">液晶電視</option>
+                      <option value="4">平板電腦</option>
+                    </select>
+                    <span class="fa fa-caret-down"></span>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <table id="sort-table2" class="table table-responsive mb-0 channel-table">
+                    <thead>
+                      <tr>
+                        <th class="min-w55 text-center">名次</th>
+                        <th class="min-w">分類名稱</th>
+                        <th class="min-w55 text-center">商品圖</th>
+                        <th>商品名稱</th>
+                        <th class="min-w110 text-right" data-sort="int">價差率%<em class="fa fa-question-circle" data-toggle="tooltip" title="我的價格與次低價的價差率"></em><i class="fa fa-sort"></i></th>
+                        <th class="min-w text-right">我的價格</th>
+                        <th class="min-w text-right">次低價</th>
+                        <th class="min-w text-right">最高價</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-align-middle">
+                      <tr>
+                        <td class="text-center">1</td>
+                        <td>平板電腦</td>
+                        <td class="text-center"><img src="../asset/images/36476_s.jpg" alt=""></td>
+                        <td>【Apple 蘋果】iPad Pro 9.7吋/指紋辨識/LTE/WiFi/128GB 平板電腦</td>
+                        <td class="text-right h5">23.4%</td>
+                        <td class="text-right">
+                          <a href="#" target="_blank">22,599元</a>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>22,789元</span>
+                            <ul>
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>25,789元</span>
+                            <ul class="bottom-right">
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">friDay購物 x GoHappy</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">2</td>
+                        <td>3C</td>
+                        <td class="text-center">
+                          <img src="../asset/images/50168_s.jpg" alt="">
+                        </td>
+                        <td>【Apple 蘋果】iPad Pro 9.7吋/指紋辨識/LTE/WiFi/128GB 平板電腦</td>
+                        <td class="text-right h5">23.4%</td>
+                        <td class="text-right">
+                          <a href="#" target="_blank">22,599元</a>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>22,789元</span>
+                            <ul>
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>25,789元</span>
+                            <ul class="bottom-right">
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">3</td>
+                        <td>冰箱/冷凍櫃</td>
+                        <td class="text-center">
+                          <img src="../asset/images/61842_s.jpg" alt="">
+                        </td>
+                        <td>【Apple 蘋果】iPad Pro 9.7吋/指紋辨識/LTE/WiFi/128GB 平板電腦</td>
+                        <td class="text-right h5">5.2%</td>
+                        <td class="text-right">
+                          <a href="https://goo.gl/Hs93he" target="_blank">22,599元</a>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>22,789元</span>
+                            <ul>
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>25,789元</span>
+                            <ul class="bottom-right">
+                              <li>
+                                <a href="https://goo.gl/Hs93he" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">4</td>
+                        <td>生活用品</td>
+                        <td class="text-center">
+                          <img src="https://img.ezprice.com.tw/is/a.ecimg.tw/items/DAAG4SA90081QM6/000001_0.jpg" alt="舒潔 洋甘菊萃取抽取衛生紙(100抽x8包/串)">
+                        </td>
+                        <td>舒潔 洋甘菊萃取抽取衛生紙(100抽x8包/串)</td>
+                        <td class="text-right h5">5.2%</td>
+                        <td class="text-right">
+                          <a href="https://goo.gl/Hs93he" target="_blank">109元</a>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>119元</span>
+                            <ul>
+                              <li>
+                                <a href="#" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">PChome線上購物</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td class="text-right">
+                          <div class="small text-muted show-more-shop">
+                            <span>129元</span>
+                            <ul class="bottom-right">
+                              <li>
+                                <a href="https://goo.gl/Hs93he" target="_blank">momo富邦購物館</a>
+                              </li>
+                              <li>
+                                <a href="#" target="_blank">friDay購物 x GoHappy</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="app-footer">
+      <div class="ccc text-center">
+          © 2017 EZprice
+      </div>
+    </footer>
+  </div>
+  <!-- Jquery scripts -->
+    <script type="text/javascript" src="../asset/javascripts/jquery-2.2.3.min.js"></script>
+
+  <!-- main scripts -->
+    <script type="text/javascript" src="../asset/javascripts/main-dist.js"></script>
+
+  <!-- tooltip script -->
+    <script type="text/javascript">
+      $(function () {
+        $('#sort-table2').tablesorter(); 
+        $('[data-toggle="tooltip"]').tooltip()
+      })
+    </script>
+    <script>
+      $.material.init();
+    </script>
+    <script>
+      $('#table-scroll-body').slimScroll({
+          height: '320px'
+      });
+    </script>
+</body>
+</html>
