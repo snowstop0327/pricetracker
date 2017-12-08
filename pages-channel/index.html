@@ -120,18 +120,17 @@
               <div class="card">
                 <div class="card-header">
                   <h2 class="card-title">低價商品數走勢</h2>
-                  <div class="action-group">
-                    <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
-                  </div>
-                </div>
-                <div class="form-group row">
-                  <div class="col-sm-5 input-group px-3">
-                    <div class="input-group-addon">
-                      <i class="fa fa-calendar"></i>
+                  <div class="action-group time-range">
+                    <div class="form-group">
+                      <div class="input-group px-3">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                      </div>
+                      <!-- /.input group -->
                     </div>
-                    <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
-                  <!-- /.input group -->
                 </div>
                 <div class="card-body">
                   <div id="chartdiv3" class="chartdiv"></div>
@@ -150,7 +149,7 @@
                         <ul class="row table-head">
                             <li class="col">名次</li>
                             <li class="col">通路名稱</li>
-                            <li class="col">低價商商品數</li>
+                            <li class="col">低價商品數</li>
                             <li class="col">佔比</li>
                           </ul >
                         <div class="table-body" id="table-scroll-body">
@@ -170,7 +169,7 @@
                             <li class="col">3</li>
                             <li class="col">Yahoo!奇摩購物中心</li>
                             <li class="col">56</li>
-                            <li class="col">10%</li>
+                            <li class="col">10.0%</li>
                           </ul>
                           <ul class="row">
                             <li class="col">4</li>
@@ -209,12 +208,12 @@
                             <li class="col">2.3%</li>
                           </ul>
                           <ul class="row">
-                            <li class="col">11</li>
+                            <li class="col">10</li>
                             <li class="col">家樂福</li>
                             <li class="col">11</li>
                             <li class="col">1.9%</li>
                           </ul>
-                        </div class="table-body" id="">
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-7">
@@ -228,7 +227,7 @@
           <div class="row card-min-h">
             <div class="col-md-6">
               <div class="card">
-                <h2 class="card-header">我的最新低價概況</h2>
+                <h2 class="card-header">我的最新低價TOP5</h2>
                 <div class="card-body">
                   <table class="table table-hover table-responsive">
                     <thead class="gray-bg">
@@ -255,7 +254,7 @@
                       <tr>
                         <td class="text-center">3</td>
                         <td><h4 class="product-name">【PASEO 倍潔雅/倍舒柔】金裝 袖珍包 面紙</h4></td>
-                        <td class="text-right">10%</td>
+                        <td class="text-right">10.0%</td>
                         <td class="text-right">599元</td>
                       </tr>
                       <tr>
@@ -267,7 +266,7 @@
                       <tr>
                         <td class="text-center">5</td>
                         <td><h4 class="product-name">偉嘉貓乾糧-鮪魚總匯口味1.2kg/袋</h4></td>
-                        <td class="text-right">5%</td>
+                        <td class="text-right">5.0%</td>
                         <td class="text-right">569元</td>
                       </tr>
                     </tbody>
@@ -277,7 +276,7 @@
             </div>
             <div class="col-md-6">
               <div class="card">
-                <h2 class="card-header">我的最新熱門商品概況</h2>
+                <h2 class="card-header">我的最新熱門商品TOP5</h2>
                 <div class="card-body">
                   <table class="table table-hover table-responsive">
                     <thead class="gray-bg">
@@ -304,7 +303,7 @@
                       <tr>
                         <td class="text-center">3</td>
                         <td><h4 class="product-name">【PASEO 倍潔雅/倍舒柔】金裝 袖珍包 面紙</h4></td>
-                        <td class="text-right">10%</td>
+                        <td class="text-right">10.0%</td>
                         <td class="text-right">599元</td>
                       </tr>
                       <tr>
@@ -316,7 +315,7 @@
                       <tr>
                         <td class="text-center">5</td>
                         <td><h4 class="product-name">偉嘉貓乾糧-鮪魚總匯口味1.2kg/袋</h4></td>
-                        <td class="text-right">5%</td>
+                        <td class="text-right">5.0%</td>
                         <td class="text-right">569元</td>
                       </tr>
                     </tbody>
@@ -326,7 +325,7 @@
             </div>
             <div class="col-md-6">
               <div class="card">
-                <h2 class="card-header">追蹤通路低價概況</h2>
+                <h2 class="card-header">追蹤通路低價TOP5</h2>
                 <div class="card-body">
                   <table class="table table-hover table-responsive">
                     <thead class="gray-bg">
@@ -354,7 +353,7 @@
                         <td class="text-center">3</td>
                         <td><h3 class="shop-name">udn買東西</h3></td>
                         <td><h4 class="product-name">【PASEO 倍潔雅/倍舒柔】金裝 袖珍包 面紙</h4></td>
-                        <td class="text-right">10%</td>
+                        <td class="text-right">10.0%</td>
                       </tr>
                       <tr>
                         <td class="text-center">4</td>
@@ -366,7 +365,7 @@
                         <td class="text-center">5</td>
                         <td><h3 class="shop-name">Yahoo!奇摩購物中心</h3></td>
                         <td><h4 class="product-name">偉嘉貓乾糧-鮪魚總匯口味1.2kg/袋</h4></td>
-                        <td class="text-right">5%</td>
+                        <td class="text-right">5.O%</td>
                       </tr>
                     </tbody>
                   </table>
@@ -375,7 +374,7 @@
             </div>
             <div class="col-md-6">
               <div class="card">
-                <h2 class="card-header">追蹤通路熱門商品概況</h2>
+                <h2 class="card-header">追蹤通路熱門商品TOP5</h2>
                 <div class="card-body">
                   <table class="table table-hover table-responsive">
                     <thead class="gray-bg">

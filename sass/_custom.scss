@@ -462,8 +462,6 @@ table.product-table {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; 
-
-
   }
 }
 
@@ -771,6 +769,18 @@ table.product-table {
   -webkit-box-shadow: none;
   box-shadow: none;
   border-radius: 0;
+}
+
+.action-group.time-range {
+  width: 33%;
+  display: flex;
+  padding: 0 19px 0 0;
+  .form-group {
+    margin-top: 0;
+    max-width: 400px;
+    margin-left: auto;
+    width: 100%;
+  }
 }
 
 // material ripple
@@ -1096,6 +1106,12 @@ table.product-table {
   }
 }
 
+@include media-breakpoint-down(lg) {
+  .action-group.time-range {
+    width: 40%;
+  }
+}
+
 //
 // Mobile layout
 //
@@ -1120,6 +1136,9 @@ table.product-table {
   }
   .product-item .text-right span.small {
     display: block;
+  }
+  .action-group.time-range {
+    width: 50%;
   }
 
 }
@@ -1146,6 +1165,13 @@ table.product-table {
     .card {
       min-height: auto;
     }
+  }
+  .action-group.time-range {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 15px;
+    top: 0;
   }
 }
 
