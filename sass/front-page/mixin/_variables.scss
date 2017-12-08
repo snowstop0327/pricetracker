@@ -14,6 +14,13 @@ $gray-117: #757575;
 $gray-74: #4A4A4A;
 $black: #000;
 
+$theme-colors: (
+  primary :   $primary,
+  secondary : $blue,
+  danger:     $red,
+  light:      $gray-244,
+  dark:       $blue-dark
+);
 
 // button
 

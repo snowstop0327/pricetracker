@@ -458,6 +458,7 @@ table.product-table {
     max-height: $font-size-base*1.5*2;
     overflow: hidden;
     line-height: 1.5;
+    display: inline-block;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical; 
@@ -1069,6 +1070,14 @@ table.product-table {
   .card-min-h {
     .card {
       max-height: 454px;
+    }
+  }
+  .table {
+    .product-name, .shop-name {
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 1;
+      // max-width: 300px;
+      // // display: inline-block;
     }
   }
 }
