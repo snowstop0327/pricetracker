@@ -199,7 +199,7 @@
                   <!-- 表內容 -->
                   <div class="card-content">
                     <div class="row align-items-center text-center product-width product-item">
-                      <div class="col-sm-4 col-lg-4">
+                      <a href="product.html" class="col-sm-4 col-lg-4 block-link">
                         <ul class="row nav">
                           <li class="col product-title pdL-more">
                             <div class="brand">BENQ</div>
@@ -210,13 +210,15 @@
                             <img src="http://www.tkec.com.tw/image/product/201604/166213_M.jpg?t=20180115111334" alt="BENQ 32吋 32CF300">
                           </li>
                         </ul>
-                      </div>
+                      </a>
                       <div class="col text-right"><span class="h4">134,888</span> 元</div>
                       <div class="col"><span class="h4">7</span></div>
                       <div class="col"><span class="h4">12</span></div>
                       <div class="col text-right">
                         <div class="show-more-block">
-                          <a href="https://24h.pchome.com.tw/store/DSAB04" target="_blank"><span>5,989元</span></a>
+                          <a href="https://24h.pchome.com.tw/store/DSAB04" target="_blank">
+                            <span>5,989元</span>
+                          </a>
                           <ul class="tooltip-right">
                             <li>PChome線上購物</li>
                           </ul>
@@ -234,20 +236,21 @@
                           </ul>
                         </div>
                         <div class="small text-muted show-more-shop">
-                          <a href="product.html" class="text-muted"><span>看更多...</span></a>
-                          <ul>
-                            <li>樂天市場購物網</li>
-                            <li>udn買東西</li>
-                            <li>friDay購物 x GoHappy</li>
-                            <li>Yahoo奇摩購物中心</li>
-                            <li>燦坤快3</li>
-                          </ul>
+                          <a href="product.html" class="text-muted"><span>看更多...</span>
+                            <ul>
+                              <li>樂天市場購物網</li>
+                              <li>udn買東西</li>
+                              <li>friDay購物 x GoHappy</li>
+                              <li>Yahoo奇摩購物中心</li>
+                              <li>燦坤快3</li>
+                            </ul>
+                          </a>
                         </div>
                       </div>
                       <div class="col text-right"><span class="h4">-8.2%</span></div>
                     </div>
                     <div class="row align-items-center text-center product-width product-item">
-                      <div class="col-sm-4 col-lg-4">
+                      <a href="product.html" class="col-sm-4 col-lg-4 block-link">
                         <ul class="row nav">
                           <li class="col product-title pdL-more">
                             <div class="brand">BenQ明基</div>
@@ -258,7 +261,7 @@
                             <img src="https://www.benq.com/content/dam/b2c/zh-tw/tv/entry/43cf500/gallery/01-black-front.png" alt="BENQ 32吋 32CF300">
                           </li>
                         </ul>
-                      </div>
+                      </a>
                       <div class="col text-right"><span class="h4">12,888</span> 元</div>
                       <div class="col"><span class="h4">7</span></div>
                       <div class="col"><span class="h4">12</span></div>
@@ -275,11 +278,22 @@
                             <li>樂天市場購物網</li>
                           </ul>
                         </div>
+                        <div class="small text-muted show-more-shop">
+                          <a href="product.html" class="text-muted"><span>看更多...</span>
+                            <ul>
+                              <li>樂天市場購物網</li>
+                              <li>udn買東西</li>
+                              <li>friDay購物 x GoHappy</li>
+                              <li>Yahoo奇摩購物中心</li>
+                              <li>燦坤快3</li>
+                            </ul>
+                          </a>
+                        </div>
                       </div>
                       <div class="col text-right"><span class="h4">-8.2%</span></div>
                     </div>
                     <div class="row align-items-center text-center product-width product-item">
-                      <div class="col-sm-4 col-lg-4">
+                      <a href="product.html" class="col-sm-4 col-lg-4 block-link">
                         <ul class="row nav">
                           <li class="col product-title pdL-more">
                             <div class="brand">BENQ</div>
@@ -290,7 +304,7 @@
                             <img src="http://localhost:7890/asset/images/default-img.svg" alt="BENQ 32吋 32CF300">
                           </li>
                         </ul>
-                      </div>
+                      </a>
                       <div class="col text-right"><span class="h4">6,990</span> 元</div>
                       <div class="col"><span class="h4">7</span></div>
                       <div class="col"><span class="h4">12</span></div>
@@ -390,6 +404,14 @@
     <script type="text/javascript">
       $(function () {
         $('[data-toggle="tooltip"]').tooltip()
+      })
+      $(function(){
+        $('.show-more-shop').mouseover(function(event) {
+          $(this).css('z-index', '5');
+        });
+        $('.show-more-shop').mouseleave(function(event) {
+          $(this).css('z-index', '2');
+        });
       })
     </script>
     <script>

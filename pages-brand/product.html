@@ -72,13 +72,13 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="marketData.html" class="nav-link">
               <i class="fa fa-bar-chart-o"></i>
               市場數據分析
             </a>
           </li>
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="industryData.html" class="nav-link">
               <i class="fa fa-book"></i>
               產業地圖分析
             </a>
@@ -161,21 +161,11 @@
                 </div>
                 <div class="more-price">
                   <span class="py-1"><strong class="h6">37,399</strong>元</span>
-                  <div class="small text-muted show-more-shop">
-                    <span>（最低價）</span>
-                    <ul class="tooltip-right">
-                      <li>Yahoo奇摩購物中心</li>
-                    </ul>
-                  </div>
+                  <span class="small text-muted">（最低價）</span>
                 </div>
                 <div class="more-price">
                   <span class="py-1"><strong class="h6">67,399</strong>元</span>
-                  <div class="small text-muted show-more-shop">
-                    <span>（最高價）</span>
-                    <ul class="tooltip-right">
-                      <li>PChome線上購物</li>
-                    </ul>
-                  </div>
+                  <span class="small text-muted">（最高價）</span>
                 </div>
               </div>
             </div>
@@ -194,19 +184,28 @@
               <div class="card">
                 <div class="card-header">
                   <h2 class="card-title">各通路歷史低價</h2>
+                  <div class="action-group time-range">
+                    <div class="form-group">
+                      <div class="input-group px-3">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                      </div>
+                    </div>
+                  </div>
                   <!-- <div class="action-group">
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div> -->
                 </div>
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                   <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
                     <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
-                  <!-- /.input group -->
-                </div>
+                </div> -->
                 <div class="card-body">
                   <div id="chartdiv3" class="chartdiv"></div>
                 </div>
@@ -218,19 +217,28 @@
               <div class="card">
                 <div class="card-header">
                   <h2 class="card-title">各通路價差率</h2>
+                  <div class="action-group time-range">
+                    <div class="form-group">
+                      <div class="input-group px-3">
+                        <div class="input-group-addon">
+                          <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" name="daterange" value="10/01/2017 - 10/07/2017">
+                      </div>
+                    </div>
+                  </div>
                   <!-- <div class="action-group">
                     <button class="btn btn-primary"><i class="fa fa-download"></i>下載報表</button>
                   </div> -->
                 </div>
-                <div class="form-group row">
+                <!-- <div class="form-group row">
                   <div class="col-sm-6 input-group px-3">
                     <div class="input-group-addon">
                       <i class="fa fa-calendar"></i>
                     </div>
                     <input type="text" class="form-control pull-left" name="daterange" value="10/01/2017 - 10/07/2017">
                   </div>
-                  <!-- /.input group -->
-                </div>
+                </div> -->
                 <div class="card-body">
                   <div id="chartdiv4" class="chartdiv"></div>
                 </div>
