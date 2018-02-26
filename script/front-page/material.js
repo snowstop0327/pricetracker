@@ -30,13 +30,13 @@
     return false;
   }
 
-  function _addFormGroupFocus(element) {
-    var $element = $(element);
-    if (!$element.prop('disabled')) {  // this is showing as undefined on chrome but works fine on firefox??
-      $element.closest(".form-group").addClass("is-focused");
-      $element.closest('.input-group').addClass('active');
-    }
-  }
+  // function _addFormGroupFocus(element) {
+  //   var $element = $(element);
+  //   if (!$element.prop('disabled')) {  // this is showing as undefined on chrome but works fine on firefox??
+  //     $element.closest(".form-group").addClass("is-focused");
+  //     $element.closest('.input-group').addClass('active');
+  //   }
+  // }
 
   function _toggleDisabledState($element, state) {
     var $target;
@@ -54,24 +54,24 @@
       disabledToggleType = true;
     }
     $input.closest('label').hover(function () {
-        var $i = $(this).find('input');
-        var isDisabled = $i.prop('disabled'); // hack because the _addFormGroupFocus() wasn't identifying the property on chrome
-        if (disabledToggleType) {
-          _toggleDisabledState($(this), isDisabled);
-        }
-        if (!isDisabled) {
-          _addFormGroupFocus($i);     // need to find the input so we can check disablement
-        }
-      },
+      var $i = $(this).find('input');
+      var isDisabled = $i.prop('disabled'); // hack because the _addFormGroupFocus() wasn't identifying the property on chrome
+      if (disabledToggleType) {
+        _toggleDisabledState($(this), isDisabled);
+      }
+      if (!isDisabled) {
+        _addFormGroupFocus($i);     // need to find the input so we can check disablement
+      }
+    },
       function () {
         _removeFormGroupFocus($(this).find('input'));
       });
   }
 
-  function _removeFormGroupFocus(element) {
-    $(element).closest(".form-group").removeClass("is-focused"); // remove class from form-group
-    $(element).closest(".input-group").removeClass("active");
-  }
+  // function _removeFormGroupFocus(element) {
+  //   $(element).closest(".form-group").removeClass("is-focused"); // remove class from form-group
+  //   $(element).closest(".input-group").removeClass("active");
+  // }
 
   $.material = {
     "options": {
@@ -172,9 +172,9 @@
           }
 
           // Set as empty if is empty (damn I must improve this...)
-          if ($input.val() === null || $input.val() == "undefined" || $input.val() === "") {
-            $formGroup.addClass("is-empty");
-          }
+          // if ($input.val() === null || $input.val() == "undefined" || $input.val() === "") {
+          //   $formGroup.addClass("is-empty");
+          // }
 
           // Support for file input
           if ($formGroup.find("input[type=file]").length > 0) {
@@ -187,21 +187,21 @@
 
       $(document)
         .on("keydown paste", ".form-control", function (e) {
-          if (_isChar(e)) {
-            $(this).closest(".form-group").removeClass("is-empty");
-          }
+          // if (_isChar(e)) {
+          //   $(this).closest(".form-group").removeClass("is-empty");
+          // }
         })
         .on("keyup change", ".form-control", function () {
           var $input = $(this);
           var $formGroup = $input.closest(".form-group");
           var isValid = (typeof $input[0].checkValidity === "undefined" || $input[0].checkValidity());
 
-          if ($input.val() === "") {
-            $formGroup.addClass("is-empty");
-          }
-          else {
-            $formGroup.removeClass("is-empty");
-          }
+          // if ($input.val() === "") {
+          //   $formGroup.addClass("is-empty");
+          // }
+          // else {
+          //   $formGroup.removeClass("is-empty");
+          // }
 
           // Validation events do not bubble, so they must be attached directly to the input: http://jsfiddle.net/PEpRM/1/
           //  Further, even the bind method is being caught, but since we are already calling #checkValidity here, just alter
@@ -209,24 +209,24 @@
           //
           // NOTE: I'm not sure we should be intervening regarding validation, this seems better as a README and snippet of code.
           //        BUT, I've left it here for backwards compatibility.
-          if (validate) {
-            if (isValid) {
-              $formGroup.removeClass("has-error").addClass("is-empty");
-            }
-            else {
-              $formGroup.addClass("has-error").removeClass("is-empty");
-            }
-          }
+          // if (validate) {
+          //   if (isValid) {
+          //     $formGroup.removeClass("has-error").addClass("is-empty");
+          //   }
+          //   else {
+          //     $formGroup.addClass("has-error").removeClass("is-empty");
+          //   }
+          // }
         })
-        .on("focus", ".form-control, .form-group.is-fileinput", function () {
-          _addFormGroupFocus(this);
-        })
-        .on("blur", ".form-control, .form-group.is-fileinput", function () {
-          _removeFormGroupFocus(this);
-        })
+        // .on("focus", ".form-control, .form-group.is-fileinput", function () {
+        //   _addFormGroupFocus(this);
+        // })
+        // .on("blur", ".form-control, .form-group.is-fileinput", function () {
+        //   _removeFormGroupFocus(this);
+        // })
         // make sure empty is added back when there is a programmatic value change.
         //  NOTE: programmatic changing of value using $.val() must trigger the change event i.e. $.val('x').trigger('change')
-        .on("change", ".form-group input,.form-group textarea", function () {
+        .on("change", ".form-group input", function () {
           var $input = $(this);
           if ($input.attr("type") == "file") {
             return;
@@ -234,11 +234,11 @@
 
           var $formGroup = $input.closest(".form-group");
           var value = $input.val();
-          if (value) {
-            $formGroup.removeClass("is-empty");
-          } else {
-            $formGroup.addClass("is-empty");
-          }
+          // if (value) {
+          //   $formGroup.removeClass("is-empty");
+          // } else {
+          //   $formGroup.addClass("is-empty");
+          // }
         })
         // set the fileinput readonly field with the name of the file
         .on("change", ".form-group.is-fileinput input[type='file']", function () {
@@ -249,11 +249,11 @@
             value += file.name + ", ";
           });
           value = value.substring(0, value.length - 2);
-          if (value) {
-            $formGroup.addClass("is-empty");
-          } else {
-            $formGroup.addClass("is-empty");
-          }
+          // if (value) {
+          //   $formGroup.addClass("is-empty");
+          // } else {
+          //   $formGroup.addClass("is-empty");
+          // }
           $formGroup.find("input.form-control[readonly]").val(value);
         });
     },
