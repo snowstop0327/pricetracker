@@ -26,5 +26,4 @@
 //@prepros-append vendors/jquery.tablesorter.min.js
 
 
-// my js
 
