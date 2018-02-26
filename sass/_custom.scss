@@ -285,6 +285,9 @@ th[data-sort] {
   a {
     &:hover {
       text-decoration: none;
+      span {
+        color: theme-color("primary") !important;
+      }
     }
   }
   .block-link {
