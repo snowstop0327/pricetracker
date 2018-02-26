@@ -337,17 +337,20 @@
               <div class="card">
                 <h2 class="card-header">今日破價商品</h2>
                 <div class="card-body">
+                  <!-- 表頭部 -->
                   <ul class="row nav table-outline text-center product-width">
-                    <li class="col">商品名/商品圖</li>
-                    <li class="col text-right">價格提醒<i class="fa fa-question-circle" data-toggle="tooltip" title="您設定的最低販售價格。當通路低於此價格時，系統會發出破價通知。"></i></li>
-                    <li class="col text-right"><span class="ellipsis-text">通路最高/最低價</span><i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，該商品販售的最高價與最低價。"></i></li>
+                    <li class="col-sm-4 col-lg-4 text-left pdL-more">品項/商品圖</li>
+                    <li class="col text-right">破價標準<i class="fa fa-question-circle" data-toggle="tooltip" title="您設定的最低販售價格。當通路低於此價格時，系統會發出破價通知。"></i></li>
+                    <!-- <li class="col text-right"><span class="ellipsis-text">通路最高/最低價</span><i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，該商品販售的最高價與最低價。"></i></li> -->
                     <li class="col">銷售通路數<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，有販售該商品的通路數量。"></i></li>
-                    <li class="col">破價通路<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，低於價格提醒標準的通路。"></i></li>
-                    <li class="col">最大價差率<i class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></i></li>
+                    <li class="col">破價通路數<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，低於破價標準的通路。"></i></li>
+                    <li class="col text-right">價格/連結</li>
+                    <li class="col text-right">最大價差率<i class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></i></li>
                   </ul>
+                  <!-- 表內容 -->
                   <div class="card-content text-center">
                     <img src="../asset/images/lowicon.svg" alt="">
-                    <span style="display: block;">今日無破價商品</span>
+                    <span class="d-block">今日無破價商品</span>
                   </div>
                 </div>
               </div>

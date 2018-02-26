@@ -295,7 +295,8 @@ th[data-sort] {
   flex-wrap: wrap;
   align-content: center;
   text-align: left;
-  color: theme-color("primary");
+  font-size: 1rem;
+  // color: theme-color("primary");
   .brand {
     width: 100%;
   }
@@ -1114,6 +1115,23 @@ $autofill-bg-color:0 0 0 100px #FFF inset;
   // }
   .card-body {
     overflow: scroll; 
+  }
+}
+
+.full-height {
+  .col {
+    // padding-bottom: 1.5rem;
+  }
+  .card {
+    height: 120px;
+    img {
+      height: 100%;
+    }
+  }
+  .pd-img {
+    display: block;
+    height: 120px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 1300px) {

@@ -93,121 +93,99 @@
           <div class="content-top clearfix">
             <h1 class="h4 float-left">BENQ 43吋 43CF500</h1>
           </div>
-          <div class="row">
-            <div class="img-box">
-              <div class="card bg-white">
+          <!-- 6欄總數據 -->
+          <div class="row full-height">
+            <!-- 產品圖 -->
+            <div class="col">
+              <div class="card bg-white pd-img">
                 <img src="https://www.benq.com/content/dam/b2c/zh-tw/tv/entry/43cf500/gallery/01-black-front.png" alt="BENQ 43吋 43CF500">
               </div>
             </div>
             <div class="col">
-              <div class="row flex-wrap product-info">
-                <div class="col-sm-12 col-lg-4">
-                  <div class="card bg-white text-center">
-                    <div class="card-header">
-                      <h2 class="card-title text-left h6">價格提醒<i class="fa fa-question-circle" data-toggle="tooltip" title="您設定的最低販售價格。當通路低於此價格時，系統會發出破價通知。"></i></h2>
-                      <div class="action-group">
-                        <button type="button" class="btn btn-link modal-btn" data-toggle="modal" data-target="#myModal">
-                          <i class="fa fa-pencil"></i>
-                        </button>
-                      </div>
-                    </div>
-                    <!-- /.modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                      <div class="modal-dialog" role="document">
-                          <div class="modal-content">
-                              <div class="modal-header">
-                                  <h4 class="modal-title">價格提醒</h4>
-                                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                      <span aria-hidden="true">×</span>
-                                  </button>
+              <!-- 破價標準 -->
+              <div class="card bg-white text-center">
+                <div class="card-header">
+                  <h2 class="card-title text-left h6">破價標準<i class="fa fa-question-circle" data-toggle="tooltip" title="您設定的最低販售價格。當通路低於此價格時，系統會發出破價通知。"></i></h2>
+                  <div class="action-group">
+                    <button type="button" class="btn btn-link modal-btn" data-toggle="modal" data-target="#myModal">
+                      <i class="fa fa-pencil"></i>
+                    </button>
+                  </div>
+                </div>
+                <!-- /.modal -->
+                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                          <div class="modal-header">
+                              <h4 class="modal-title">破價標準</h4>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                  <span aria-hidden="true">×</span>
+                              </button>
+                          </div>
+                          <div class="modal-body">
+                            <div class="input-group">
+                              <span class="input-group-addon">$</span>
+                              <div class="form-group is-empty">
+                                <!-- <label for="number00">破價標準</label> -->
+                                <input id="number00" type="number" class="form-control">
+                                <!-- <input type="number" class="form-control is-valid"> -->
+                                <span class="invailid-block">請輸入純數字</span>
                               </div>
-                              <div class="modal-body">
-                                <div class="input-group">
-                                  <span class="input-group-addon">$</span>
-                                  <div class="form-group is-empty">
-                                    <!-- <label for="number00">破價標準</label> -->
-                                    <input id="number00" type="number" class="form-control">
-                                    <!-- <input type="number" class="form-control is-valid"> -->
-                                    <span class="invailid-block">請輸入純數字</span>
-                                  </div>
-                                </div> 
-                              </div>
-                              <div class="modal-footer">
-                                  <button type="button" class="btn btn-primary">確認</button>
-                              </div>
-                            </div>
-                            <!-- /.modal-content -->
+                            </div> 
+                          </div>
+                          <div class="modal-footer">
+                              <button type="button" class="btn btn-primary">確認</button>
+                          </div>
                         </div>
-                        <!-- /.modal-dialog -->
+                        <!-- /.modal-content -->
                     </div>
-                    <span class="d-block py-1"><strong class="h3">67,399</strong>元</span>
-                  </div>
+                    <!-- /.modal-dialog -->
                 </div>
-                <div class="col-sm-12 col-lg-4">
-                  <div class="card bg-white text-center">
-                    <div class="card-header">
-                      <h2 class="card-title text-left h6">銷售通路數<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，有販售該商品的通路數量。"></i></h2>
-                    </div>
-                    <span class="d-block py-1"><strong class="h3">217</strong></span>
-                  </div>
+                <span class="d-block py-1"><strong class="h3">67,399</strong>元</span>
+              </div>
+            </div>
+            <div class="col">
+              <!-- 銷售通路數 -->
+              <div class="card bg-white text-center">
+                <div class="card-header">
+                  <h2 class="card-title text-left h6">銷售通路數<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，有販售該商品的通路數量。"></i></h2>
                 </div>
-                <div class="col-sm-12 col-lg-4">
-                  <div class="card bg-white text-center">
-                    <div class="card-header">
-                      <h2 class="card-title text-left h6">最大價差率<i class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></i></h2>
-                    </div>
-                    <span class="d-block py-1"><strong class="h3">13</strong>%</span>
-                  </div>
+                <span class="d-block py-1"><strong class="h3">217</strong></span>
+              </div>
+            </div>
+            <div class="col">
+              <!-- 最高價/最低價 -->
+              <div class="card bg-white text-center">
+                <div class="card-header">
+                  <h2 class="card-title text-left h6">最高價/最低價<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，該商品販售的最高價與最低價。"></i></h2>
                 </div>
-                <div class="col-sm-12 col-lg-8">
-                  <div class="card bg-white text-center">
-                    <div class="card-header with-border">
-                      <h2 class="text-left card-title h6">通路最高/最低價<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，該商品販售的最高價與最低價。"></i></h2>
-                    </div>
-                    <ul class="row nav no-gutters">
-                      <li class="col right-border py-2 show-more-shop">
-                        <span class="text-primary">最低價：<strong class="h3">65,300</strong><i>元</i></span>
-                        <ul class="top-less">
-                          <li>樂天市場購物網</li>
-                          <li>udn買東西</li>
-                          <li>friDay購物 x GoHappy</li>
-                          <li>Yahoo奇摩購物中心</li>
-                          <li>燦坤快3</li>
-                        </ul>
-                      </li>
-                      <li class="col py-2 show-more-shop">
-                        <span class="text-danger">最高價：<strong class="h3">65,700</strong><i>元</i></span>
-                        
-                        <ul class="top-less">
-                          <li>樂天市場購物網</li>
-                          <li>udn買東西</li>
-                          <li>friDay購物 x GoHappy</li>
-                          <li>Yahoo奇摩購物中心</li>
-                          <li>燦坤快3</li>
-                        </ul>
-                      </li>
+                <div class="more-price">
+                  <span class="py-1"><strong class="h6">37,399</strong>元</span>
+                  <div class="small text-muted show-more-shop">
+                    <span>（最低價）</span>
+                    <ul class="tooltip-right">
+                      <li>Yahoo奇摩購物中心</li>
                     </ul>
-                    <!-- <span>最低價：</span><span><strong>65,300</strong>元</span>
-                    <span>最高價：</span><span><strong>65,700</strong>元</span> -->
                   </div>
                 </div>
-                <div class="col-sm-12 col-lg-4">
-                  <div class="card bg-white text-center">
-                    <div class="card-header">
-                      <h2 class="text-left card-title h6">破價通路<i class="fa fa-question-circle" data-toggle="tooltip" title="監控的通路中，低於價格提醒標準的通路。"></i></h2>
-                    </div>
-                    <div class="py-1">
-                      <span class="d-block h6 ellipsis-text">friDay購物 x GoHappy</span>
-                      <div class="small text-muted show-more-shop">
-                        <span>共有2家...</span>
-                        <ul>
-                          <li>樂天市場購物網</li>
-                          <li>udn買東西</li>
-                        </ul>
-                      </div>
-                    </div>
+                <div class="more-price">
+                  <span class="py-1"><strong class="h6">67,399</strong>元</span>
+                  <div class="small text-muted show-more-shop">
+                    <span>（最高價）</span>
+                    <ul class="tooltip-right">
+                      <li>PChome線上購物</li>
+                    </ul>
                   </div>
                 </div>
+              </div>
+            </div>
+            <div class="col">
+              <!-- 最大價差率 -->
+              <div class="card bg-white text-center">
+                <div class="card-header">
+                  <h2 class="card-title text-left h6">最大價差率<i class="fa fa-question-circle" data-toggle="tooltip" title="監控通路中，最低價格與破價標準的價差率。"></i></h2>
+                </div>
+                <span class="d-block py-1"><strong class="h3">13</strong>%</span>
               </div>
             </div>
           </div>
