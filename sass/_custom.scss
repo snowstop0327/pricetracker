@@ -60,6 +60,7 @@ footer a {
   position: fixed;
   transition: .3s cubic-bezier(.25,.8,.25,1);
   width: 260px;
+  height: 100vh;
   top: 0;
   left: 0;
   will-change: padding-left;
@@ -170,7 +171,8 @@ nav.app-header.navbar  {
 .sidebar-nav {
   width: 100%;
   margin-top: 8px;
-  min-height: 100vh;
+  max-height: calc(100vh - 105px);
+  // min-height: 100vh;
 }
 .sidebar-nav .nav-item {
   position: relative;
