@@ -171,7 +171,7 @@ nav.app-header.navbar  {
 .sidebar-nav {
   width: 100%;
   margin-top: 8px;
-  max-height: calc(100vh - 105px);
+  min-height: calc(100vh - 120px);
   // min-height: 100vh;
 }
 .sidebar-nav .nav-item {
