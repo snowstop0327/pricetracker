@@ -210,8 +210,9 @@
       border-radius: $border-radius;
     }
     > .nav-dropdown-items {
-      max-height: 1000px;
+      // max-height: 1000px;
       // padding-left: 15px;
+      max-height: 100%;
     }
 
     .nav-link {

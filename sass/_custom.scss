@@ -291,6 +291,9 @@ th[data-sort] {
         color: theme-color("primary") !important;
       }
     }
+    &:focus {
+      outline: 0;
+    }
   }
   .block-link {
     position: static;
@@ -621,13 +624,10 @@ table.product-table {
   border: none;
   .modal-header {
     border-bottom: none;
-    padding-top: 24px;
-    padding-right: 24px;
-    padding-bottom: 0;
-    padding-left: 24px;
+    padding: 24px;
   }
   .modal-body {
-    padding-top: 24px;
+    // padding-top: 24px;
     padding-right: 24px;
     padding-bottom: 16px;
     padding-left: 24px;
@@ -644,6 +644,9 @@ table.product-table {
       padding-right: 16px;
       width: auto;
       font-size: $font-size-lg;
+    }
+    .btn-danger {
+      color: $red;
     }
   }
 }

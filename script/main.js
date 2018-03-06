@@ -10,7 +10,7 @@
 //@prepros-append app.js
 
 // material ui
-//@prepros-append front-page/material.js
+//@prepros-append material.js
 //@prepros-append vendors/ripples.js
 
 // include Bootstrap time Picker
